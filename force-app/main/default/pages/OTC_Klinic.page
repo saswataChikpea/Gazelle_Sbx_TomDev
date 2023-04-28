@@ -1,0 +1,211 @@
+<apex:page sidebar="false" showHeader="false" applyBodyTag="false" standardStylesheets="false" applyHtmlTag="false" renderAs="pdf" >
+<body>
+  <div style="position: running(header);" name="header2">
+    <table style="width:100%;">
+      <tr>
+        <td style="width:50%;">
+          <div class="imageDiv">
+            <img src="https://gazelle--tomdev--c.sandbox.vf.force.com/resource/1681974558000/GazelleLogo?" />
+          </div> 
+        </td>
+        <td style="width:50%;text-align:right;">
+          <div class="headingText">
+            <span id="pageNum"></span>
+            <p style="color:#808080;font-size:40px;">Professional Services</p>
+          </div>
+        </td>
+      </tr>
+  </table>
+  </div>
+
+  <div class="detail">
+    <div style="position: absolute;line-height: 1px;">
+        <p><b>Date:</b>    3/22/2022</p>
+        <p><b>Exp:</b>     4/21/2022</p>
+        <p><b>Quote:   2020-12-22-01</b></p>
+    </div>
+    <div style="position: relative;padding-left:500px;align-items: center;">
+      <p><b>TO:</b> Klinic, Inc.</p>
+    </div>
+  </div>
+<div style="padding-top:50px;">
+  <table border="0" style="width:100%;border-collapse:collapse;">
+    <tr align="center">
+      <th>Relationship Manager</th>
+      <th>Opportunity</th>
+      <th>Term</th>
+    </tr>
+    <tr align="center">
+      <td style="border:2px solid black;">Tanya Shaitulla / Gazelle Health</td> 
+      <td style="border:2px solid black;">Contact Centre Transformation</td>
+      <td style="border:2px solid black;">Fixed - Project</td>
+    </tr>
+  </table>
+</div>
+<!-- Item table -->
+<div style="padding-top:8px;">
+  <table style="width: 100%;padding-top: 10px;border-collapse:collapse;font-size: 15px;">
+    <tr style="background-color:rgb(220, 43, 226);color:white;">
+      <td colspan="6">SITE:</td>
+    </tr>
+    <tr>
+      <th style="border-top: 2px solid black; border-bottom: 2px solid black;">Qty</th>
+      <th style="width:30%;border-top: 2px solid black; border-bottom: 2px solid black;">Item</th>
+      <th style="width:35%;border-top: 2px solid black; border-bottom: 2px solid black;">Description</th>
+      <th style="border-top: 2px solid black; border-bottom: 2px solid black;">Price</th>
+      <th style="border-top: 2px solid black; border-bottom: 2px solid black;">Total NRC</th>
+      <th style="border-top: 2px solid black; border-bottom: 2px solid black;">Total MRC</th>
+    </tr>
+    <tr style="background-color:rgb(235, 235, 235)">
+      <td>30</td>
+      <td>Genesys Architect</td>
+      <td>Architectual Design for Genesys
+        Cloud Environment - NOT FOR
+        PROFIT RATE</td>
+      <td>$130.00</td>
+      <td>$3,900.00</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>120</td>
+      <td>Genesys Project Manager</td>
+      <td>Project Manager Rate NOT FOR
+        PROFIT - Includes meetings, Scope,
+        Planning and ongoing project
+        support.</td>
+      <td>$145.00</td>
+      <td>$17,400.00</td>
+      <td></td>
+    </tr>
+    <tr style="background-color:rgb(235, 235, 235)">
+      <td>22</td>
+      <td>Genesys System Integrator</td>
+      <td>Genesys Cloud - System Integrator
+        to facilitate call report and iCarol
+        integrations. Future State planning
+        with SMS / WebChat Transcripts</td>
+      <td>$115.00</td>
+      <td>$2,530.00</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>25</td>
+      <td>Genesys Business Analyst</td>
+      <td>Business Analyst for Program 
+        Design and Best Practices</td>
+      <td>$130.00</td>
+      <td>$3,250.00</td>
+      <td></td>
+    </tr>
+    <tr style="background-color:rgb(235, 235, 235)">
+      <td>30</td>
+      <td>Genesys Cloud Trainer</td>
+      <td>Training by Genesys Cloud trainer
+        with deployment as built and train
+        the trainer model.</td>
+      <td>$130.00</td>
+      <td>$3,900.00</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr style="background-color:rgb(235, 235, 235)">
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td></td>
+      <td style="font-size:10px">Note: Only actual time is billed. Adjustments to
+        be made at time of project reconciliation.
+        Budgeted items based on industry best practices
+        and lessons learned from prior deployments
+        with similar integrations and scope.</td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr style="background-color:rgb(220, 43, 226);color:white;">
+      <th style="border-top: 2px solid black;"></th>
+      <th style="border-top: 2px solid black;"></th>
+      <th style="border-top: 2px solid black;"></th>
+      <th style="border-top: 2px solid black;">TOTAL</th>
+      <th style="border-top: 2px solid black;">$30,980.00</th>
+      <th style="border-top: 2px solid black;">$0.00</th>
+    </tr>
+  </table>
+</div>
+
+<!-- footer -->
+<div class="footer" style="page-break-after:always;font-family:Arial, Helvetica, sans-serif;font-size:8pt;color:#808080;text-align:center;position: running(footer);">
+  Gazelle Integrated Communications | 1235 Bay Street, Suite 1003 | Toronto, Ontario M5R 3K4 | (416) 549-5000
+</div>
+
+<!-- 2nd page -->
+
+<div style="page-break-before: always;"></div>
+
+<div class="details-sectionOTC" style="padding-top: 20px;font-size: 10px;">
+  <p>This is an order form for ordering Services from Gazelle Integrated Communications Inc. to be delivered to the undersigned customer. Terms used and not defined in this order form have the meanings
+    given to them in the Master Terms and Conditions (the "master terms"). Once you and Gazelle sign this order form, this order form together with the Master Terms, the Service Terms applicable to
+    these services and any other documents(s) expressly incorporated into any of these documents, become a legally binding agreement between us, on the date set out above, or are incorporated
+    effective on the date into the existing agreement between us, if any (the "agreement").</p>
+  <p>Prices do not include applicable fees, taxes and shipping (unless otherwise indicated). Prices valid for 30 days. Hardware pricing valid for 10 days.</p>
+  <p>Initial term set out in the Order Form per above and may be subject to early termination fees, as set out in GICI Master Terms and Conditions. Installation timeline varies based on services ordered and
+    availability. All speed upgrades constitute new installations.</p>
+  <p>On site technician costs are quoted on an hourly basis. The provided quote is an estimated time to complete the required work. Should additional time be required, it will be billed and then quoted on an
+    hourly rate.</p>
+  <p>Copper voice services and coax data services subject to an annual increase of up to 10% based on the monthly fee before credit applicable at that time.</p>
+  <p>Services are available where technology permits, pursuant to the applicable tariffs (if regulated by the CRTC and or the FCC) and the Gazelle Terms of Service. Other conditions apply, including minimum
+    system requirements.</p>
+  <p><b>Term:</b> If your services are under a term other than monthly, it will automatically renew for the same period unless you notify Gazelle at least 90 days in advance. You will not be notified in writing on
+    your invoice or otherwise.</p>
+  <p><b>Pricing and Promotion:</b> You must continue to meet the qualification criteria for the application of credits or discounts. Prices subject to change. Taxes extra.</p>
+  <p style="font-size:15px;"><b>Phone Services</b></p>
+  <p><b>Pricing:</b> Prices subject to Gazelle remaining your long distance call provider.</p>
+  <p><b>Long Distance Plan:</b> Applies to direct-dialed outbound calls to certain geographic areas as defined for the plan; Calls to certain conference or adult services or to high-cost areas may be restricted or
+    excluded from your monthly bucket.</p>
+  <p><b>Long Distance Fraud:</b> You are responsible for payment of all fees charged to your account, whether authorized by you or not, therefore it is important to protect your account. Please take the necessary
+    steps to protect against long distance fraud.</p>
+  <p><b>Mandatory e911 Fee:</b> In compliance with CRTC regulations, a $1.00/month e911 fee will be applied to all VoIP subscribers.</p>
+</div>
+
+
+
+<div style="padding-top: 20px;">
+  <table style="width:100%;">
+    <tr>
+      <th style="width:50%;text-align:center;">Klinic, Inc.,</th>
+      <th style="width:50%;text-align:center;">Gazelle Integrated Communications Inc.</th>
+    </tr>
+    <tr>
+      <td>Signature____________________</td>
+      <td>Signature____________________</td>
+    </tr>
+    <tr>
+      <td>Name____________________</td>
+      <td>Name____________________</td>
+    </tr>
+    <tr>
+      <td>Title____________________</td>
+      <td>Title____________________</td>
+    </tr>
+    <tr>
+      <td>Date____________________</td>
+      <td>Date____________________</td>
+    </tr>
+  </table>
+</div>
+
+</body>
+</apex:page>

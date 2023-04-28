@@ -1,0 +1,60 @@
+<apex:page standardController="ChikPeaTOM__Quote__c" extensions="QuotePageController" applyBodyTag="false" standardStylesheets="false" applyHtmlTag="false" renderAs="pdf" showHeader="false">
+  <head>
+    <style>
+      @page{
+        padding-top: 90px;
+        @bottom-center {
+          content: element(footer);
+        }
+        @top-center {
+             content: element(header);
+        }
+      }
+      /* Otc Klinic */
+      #pageNum:before{
+        content: "Page " counter(page) " of " counter(pages);
+      }
+      .details-sectionOTC p{
+        font-size: 10px;
+      }
+      /* Otc Klinic end */
+
+      /* Multi Site Quote */
+      .Item-table td{
+        border: 1px solid black;
+      }
+      div.footer{
+        position: running(footer);
+      }
+      #pageNum2:before{
+        content: "Page " counter(page) " of " counter(pages);
+      }
+      #pageNum2{
+        padding-right: 30px;
+      }
+      /* Multi Site Quote end */
+
+      
+      /* .Item-table td{
+        border: 1px solid black;
+      } */
+    </style>
+  </head> 
+  <body>
+    <apex:outputPanel rendered="{!quoteType=='OTC Klinic'}">
+      <apex:include pageName="OTC_Klinic"/>
+    </apex:outputpanel>
+
+    <apex:outputPanel rendered="{!quoteType=='Multi Site Quote'}">
+      <apex:include pageName="Multi_site_quote"/>
+    </apex:outputpanel>
+
+    <apex:outputPanel rendered="{!quoteType=='Quote With Leasing'}">
+      <apex:include pageName="Quote_With_Leasing"/>
+    </apex:outputpanel>
+
+    <apex:outputPanel rendered="{!quoteType=='Single Site Quote with Multi Services'}">
+      <apex:include pageName="Single_site_Quote_with_Multi_Services"/>
+    </apex:outputpanel>
+  </body>
+</apex:page>
