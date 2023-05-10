@@ -1,65 +1,9 @@
 <apex:page standardController="ChikPeaTOM__Quote__c" extensions="QuotePageController" sidebar="false" showHeader="false" applyBodyTag="false" standardStylesheets="false" applyHtmlTag="false" renderAs="pdf" >
   <head>
-    <style type="text/css">
-    @page{
-        padding-top: 90px;
-        @top-center {
-             content: element(header);
-        }
-        @bottom-center {
-             content: element(footer);
-        }
-        /* @bottom-left{
-          content: "Page " counter(page) " of " counter(pages);
-        } */
-    }
-      .contact table{
-        font-size: 13px;
-        line-height: 1;
-      }
-      .t1 table{
-        font-size: 13px;
-      }
-      .Item-table td{
-        border: 1px solid black;
-      }
-      div.mainHeader{
-        position: running(header);
-      }
-      div.footer{
-        position: running(footer);
-      }
-      #pageNum:before{
-        content: "Page " counter(page) " of " counter(pages);
-      }
-      #pageNum{
-        padding-right: 30px;
-      }
-      .details p{
-        font-size: 10px;
-      }
-      .company{
-        padding-top: 20px;
-        line-height: 2;
-      }
-      .company th,td{
-        font-size: 12px;
-      }
-      .thankyou{
-        display: grid;
-        place-items:center;
-      }
-      .thankyou p{
-        font-size: 13px;
-        font-style: italic;
-        padding-left: 40%;
-        padding-top: 30px;
-      }
-    </style>
   </head>
   <body>
     <!-- Header -->
-    <div class="mainHeader" name="header">
+    <div class="mainHeader" style="position: running(header);" name="header">
       <table style="width:100%;">
         <tr>
           <td style="width:50%;">
@@ -78,12 +22,12 @@
     </div>
     <!-- footer -->
     <div class="footer" style="page-break-after:always;font-family:Arial, Helvetica, sans-serif;font-size:8pt;color:#808080;text-align:center;">
-     <span id="pageNum"></span> Accelerated Connections Inc. 155 Wellington St. W., Suite 3740, Toronto, ON, M5V 3H1. 866-814-1635. connections.ca
+     <span id="pageNum2"></span> Accelerated Connections Inc. 155 Wellington St. W., Suite 3740, Toronto, ON, M5V 3H1. 866-814-1635. connections.ca
     </div>
 
     <!-- contact details -->
     <div class="contact">
-      <table style="width:100%;">
+      <table style="width:100%;font-size: 13px;line-height: 1;">
         <tr>
           <td style="width:50%;">
 
@@ -131,7 +75,7 @@
 
     <!--  -->
     <div class="t1" style="padding-top:10px;">
-      <table border="0" style="width:100%;border-collapse:collapse;">
+      <table border="0" style="width:100%;border-collapse:collapse;font-size: 13px;">
         <tr align="center">
           <td>Salesperson</td>
           <td>Opportunity</td>
@@ -154,90 +98,16 @@
           <th>Qty</th>
           <th>Item</th>
           <th></th>
-          <th></th>
           <th>Description</th>
           <th>Unit Price</th>
           <th>Total NRC</th>
           <th>Total MRC</th>
         </tr>
-        <!-- <tr>
-          <td>1</td>
-          <td>3G-4G-LTE</td>
-          <td>ON</td>
-          <td>Unlimited 3G/4G/LTE Back Up</td>
-          <td>Pooled Backup Plan (Per
-            Site)</td>
-          <td>$15.00</td>
-          <td>$0.00</td>
-          <td>$15.00</td>
-        </tr>
-        <tr>
-          <td>1</td>
-          <td>Dry-Loop</td>
-          <td>ON</td>
-          <td>ON/QC Dry Loop A (for VDSL)</td>
-          <td>Rate Band A</td>
-          <td>$10.00</td>
-          <td>$0.00</td>
-          <td>$10.00</td>
-        </tr>
-        <tr>
-          <td>1</td>
-          <td>DSL</td>
-          <td>ON</td>
-          <td>DSL 10Mb x 1Mb</td>
-          <td></td>
-          <td>$65.00</td>
-          <td>$0.00</td>
-          <td>$65.00</td>
-        </tr>
-        <tr>
-          <td>1</td>
-          <td>Activation</td>
-          <td>ON</td>
-          <td>Telco Activation/Install Fee: DSL 10x1
-            ON/QC</td>
-          <td></td>
-          <td>$120.00</td>
-          <td>$120.00</td>
-          <td>$0.00</td>
-        </tr>
-        <tr>
-          <td>1</td>
-          <td>Network-Equipment</td>
-          <td>ON</td>
-          <td>Smart RG505N</td>
-          <td></td>
-          <td>$125.00</td>
-          <td>$125.00</td>
-          <td>$0.00</td>
-        </tr>
-        <tr>
-          <td>1</td>
-          <td>Amortized-Network-Equipment</td>
-          <td>ON</td>
-          <td>Amortized- Billion BiPAC 7820NZ</td>
-          <td></td>
-          <td>$10.00</td>
-          <td>$0.00</td>
-          <td>$10.00</td>
-        </tr>
-        <tr>
-          <td>1</td>
-          <td>Technician</td>
-          <td>ON</td>
-          <td>Dry Loop Install ON/QC (for VDSL)</td>
-          <td></td>
-          <td>$30.00</td>
-          <td>$30.00</td>
-          <td>$0.00</td>
-        </tr> -->
         <apex:repeat value="{!quoteLineDetail}" var="a">
           <tr>
             <td>{!a.ChikPeaTOM__Qty__c}</td>
             <td>{!a.ChikPeaTOM__Service_Plan__r.name}</td>
             <td>ON</td>
-            <td></td>
             <td>{!a.ChikPeaTOM__Service_Plan__r.ChikPeaTOM__Description__c}</td>
             <td></td>
             <td>{!a.ChikPeaTOM__MRC__c}</td>
@@ -245,13 +115,13 @@
           </tr>
         </apex:repeat>
         <tr>
-          <td colspan="5" style="border:none;"></td>
+          <td colspan="4" style="border:none;"></td>
           <td>Subtotal:</td>
           <td>${!TotalMRC}</td>
           <td>${!TotalNRC}</td>
         </tr>
         <tr style="background-color:rgb(17, 62, 131);color:white;">
-          <td colspan="5" style="border:none;"></td>
+          <td colspan="4" style="border:none;"></td>
           <td>TOTAL:</td>
           <td>${!TotalMRC}</td>
           <td>${!TotalNRC}</td>

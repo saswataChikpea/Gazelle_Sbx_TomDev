@@ -1,4 +1,4 @@
-<apex:page sidebar="false" showHeader="false" applyBodyTag="false" standardStylesheets="false" applyHtmlTag="false" renderAs="pdf" >
+<apex:page standardController="ChikPeaTOM__Quote__c" extensions="QuotePageController" sidebar="false" showHeader="false" applyBodyTag="false" standardStylesheets="false" applyHtmlTag="false" renderAs="pdf" >
 <body>
   <div style="position: running(header);" name="header2">
     <table style="width:100%;">
@@ -56,73 +56,16 @@
       <th style="border-top: 2px solid black; border-bottom: 2px solid black;">Total NRC</th>
       <th style="border-top: 2px solid black; border-bottom: 2px solid black;">Total MRC</th>
     </tr>
-    <tr style="background-color:rgb(235, 235, 235)">
-      <td>30</td>
-      <td>Genesys Architect</td>
-      <td>Architectual Design for Genesys
-        Cloud Environment - NOT FOR
-        PROFIT RATE</td>
-      <td>$130.00</td>
-      <td>$3,900.00</td>
-      <td></td>
-    </tr>
-    <tr>
-      <td>120</td>
-      <td>Genesys Project Manager</td>
-      <td>Project Manager Rate NOT FOR
-        PROFIT - Includes meetings, Scope,
-        Planning and ongoing project
-        support.</td>
-      <td>$145.00</td>
-      <td>$17,400.00</td>
-      <td></td>
-    </tr>
-    <tr style="background-color:rgb(235, 235, 235)">
-      <td>22</td>
-      <td>Genesys System Integrator</td>
-      <td>Genesys Cloud - System Integrator
-        to facilitate call report and iCarol
-        integrations. Future State planning
-        with SMS / WebChat Transcripts</td>
-      <td>$115.00</td>
-      <td>$2,530.00</td>
-      <td></td>
-    </tr>
-    <tr>
-      <td>25</td>
-      <td>Genesys Business Analyst</td>
-      <td>Business Analyst for Program 
-        Design and Best Practices</td>
-      <td>$130.00</td>
-      <td>$3,250.00</td>
-      <td></td>
-    </tr>
-    <tr style="background-color:rgb(235, 235, 235)">
-      <td>30</td>
-      <td>Genesys Cloud Trainer</td>
-      <td>Training by Genesys Cloud trainer
-        with deployment as built and train
-        the trainer model.</td>
-      <td>$130.00</td>
-      <td>$3,900.00</td>
-      <td></td>
-    </tr>
-    <tr>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-    </tr>
-    <tr style="background-color:rgb(235, 235, 235)">
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-    </tr>
+    <apex:repeat value="{!quoteLineDetail}" var="a">
+          <tr style="background-color:rgb(235, 235, 235)">
+            <td>{!a.ChikPeaTOM__Qty__c}</td>
+            <td>{!a.ChikPeaTOM__Service_Plan__r.name}</td>
+            <td>{!a.ChikPeaTOM__Service_Plan__r.ChikPeaTOM__Description__c}</td>
+            <td></td>
+            <td>{!a.ChikPeaTOM__NRC__c}</td>
+            <td>{!a.ChikPeaTOM__MRC__c}</td>
+          </tr>
+        </apex:repeat>
     <tr>
       <td></td>
       <td style="font-size:10px">Note: Only actual time is billed. Adjustments to
@@ -140,8 +83,8 @@
       <th style="border-top: 2px solid black;"></th>
       <th style="border-top: 2px solid black;"></th>
       <th style="border-top: 2px solid black;">TOTAL</th>
-      <th style="border-top: 2px solid black;">$30,980.00</th>
-      <th style="border-top: 2px solid black;">$0.00</th>
+      <th style="border-top: 2px solid black;">${!TotalNRC}</th>
+      <th style="border-top: 2px solid black;">${!TotalMRC}</th>
     </tr>
   </table>
 </div>

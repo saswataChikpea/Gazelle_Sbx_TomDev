@@ -34,10 +34,29 @@
       }
       /* Multi Site Quote end */
 
-      
-      /* .Item-table td{
-        border: 1px solid black;
-      } */
+      /* Quote with leasing */
+      .details p{
+        font-size: 10px;
+      }
+      .company{
+        padding-top: 20px;
+        line-height: 2;
+      }
+      .company th,td{
+        font-size: 12px;
+      }
+      .thankyou{
+        display: grid;
+        place-items:center;
+      }
+      .thankyou p{
+        font-size: 13px;
+        font-style: italic;
+        padding-left: 40%;
+        padding-top: 30px;
+      }
+      /* Quote with leasing end */
+
     </style>
   </head> 
   <body>

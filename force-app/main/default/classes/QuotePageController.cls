@@ -25,14 +25,21 @@ public with sharing class QuotePageController {
         //quote line
         quoteLineDetail=new List<ChikPeaTOM__Quote_Line__c>();
         quoteLineDetail=[Select id,name,ChikPeaTOM__Qty__c,ChikPeaTOM__Service_Plan__r.name,ChikPeaTOM__Service_Plan__r.ChikPeaTOM__Description__c,ChikPeaTOM__MRC__c,ChikPeaTOM__NRC__c 
-                        
         from ChikPeaTOM__Quote_Line__c where ChikPeaTOM__Quote__c =:recordID];
+
+        Set<ChikPeaTOM__Quote_Line_Premise__c> qLinePremise = new Set<ChikPeaTOM__Quote_Line_Premise__c>();
 
         TotalMRC=0;
         TotalNRC=0;
         for(ChikPeaTOM__Quote_Line__c ql : quoteLineDetail){
             TotalMRC=TotalMRC+ql.ChikPeaTOM__MRC__c;
             TotalNRC=TotalNRC+ql.ChikPeaTOM__NRC__c;
+
+            for(ChikPeaTOM__Quote_Line_Premise__c qlp :[Select id,name,ChikPeaTOM__Premise__c from ChikPeaTOM__Quote_Line_Premise__c where ChikPeaTOM__Quote_Line__c = :ql.id]){
+                qLinePremise.add(qlp);
+            }
+
         }
+        System.debug('qLinePremise  '+qLinePremise);
     }
 }

@@ -1,65 +1,9 @@
-<apex:page sidebar="false" showHeader="false" applyBodyTag="false" standardStylesheets="false" applyHtmlTag="false" renderAs="pdf" >
+<apex:page standardController="ChikPeaTOM__Quote__c" extensions="QuotePageController" sidebar="false" showHeader="false" applyBodyTag="false" standardStylesheets="false" applyHtmlTag="false" renderAs="pdf" >
   <head>
-    <style type="text/css">
-    @page{
-        padding-top: 90px;
-        @top-center {
-             content: element(header);
-        }
-        @bottom-center {
-             content: element(footer);
-        }
-        /* @bottom-left{
-          content: "Page " counter(page) " of " counter(pages);
-        } */
-    }
-      .contact table{
-        font-size: 13px;
-        line-height: 1;
-      }
-      .t1 table{
-        font-size: 13px;
-      }
-      .Item-table td{
-        border: 1px solid black;
-      }
-      div.mainHeader{
-        position: running(header);
-      }
-      div.footer{
-        position: running(footer);
-      }
-      #pageNum:before{
-        content: "Page " counter(page) " of " counter(pages);
-      }
-      #pageNum{
-        padding-right: 30px;
-      }
-      .details p{
-        font-size: 10px;
-      }
-      .company{
-        padding-top: 20px;
-        line-height: 2;
-      }
-      .company th,td{
-        font-size: 12px;
-      }
-      .thankyou{
-        display: grid;
-        place-items:center;
-      }
-      .thankyou p{
-        font-size: 13px;
-        font-style: italic;
-        padding-left: 40%;
-        padding-top: 30px;
-      }
-    </style>
   </head>
   <body>
     <!-- Header -->
-    <div class="mainHeader" name="header">
+    <div style="position: running(header);" class="mainHeader" name="header">
       <table style="width:100%;">
         <tr>
           <td style="width:50%;">
@@ -78,12 +22,12 @@
     </div>
     <!-- footer -->
     <div class="footer" style="page-break-after:always;font-family:Arial, Helvetica, sans-serif;font-size:8pt;color:#808080;text-align:center;">
-     <span id="pageNum"></span> Accelerated Connections Inc. 155 Wellington St. W., Suite 3740, Toronto, ON, M5V 3H1. 866-814-1635. connections.ca
+     <span id="pageNum2"></span> Accelerated Connections Inc. 155 Wellington St. W., Suite 3740, Toronto, ON, M5V 3H1. 866-814-1635. connections.ca
     </div>
 
     <!-- contact details -->
     <div class="contact">
-      <table style="width:100%;">
+      <table style="width:100%;font-size: 13px;line-height: 1;">
         <tr>
           <td style="width:50%;">
 
@@ -129,7 +73,7 @@
 
     <!--  -->
     <div class="t1" style="padding-top:10px;">
-      <table border="0" style="width:100%;border-collapse:collapse;">
+      <table border="0" style="width:100%;border-collapse:collapse;font-size: 13px;">
         <tr align="center">
           <td>Salesperson</td>
           <td>Opportunity</td>
@@ -152,63 +96,33 @@
           <th>Qty</th>
           <th>Item</th>
           <th></th>
-          <th></th>
           <th>Description</th>
           <th>Unit Price</th>
           <th>Total NRC</th>
           <th>Total MRC</th>
         </tr>
+        <apex:repeat value="{!quoteLineDetail}" var="a">
+          <tr>
+            <td>{!a.ChikPeaTOM__Qty__c}</td>
+            <td>{!a.ChikPeaTOM__Service_Plan__r.name}</td>
+            <td>ON</td>
+            <td>{!a.ChikPeaTOM__Service_Plan__r.ChikPeaTOM__Description__c}</td>
+            <td></td>
+            <td>{!a.ChikPeaTOM__MRC__c}</td>
+            <td>{!a.ChikPeaTOM__NRC__c}</td>
+          </tr>
+        </apex:repeat>
         <tr>
-          <td>8</td>
-          <td>Rental-Voice-Equipment</td>
-          <td>ON</td>
-          <td>Rental- Polycom VVX301</td>
-          <td>SIP Phone</td>
-          <td>$6.75</td>
-          <td>$0.00</td>
-          <td>$54.00</td>
-        </tr>
-        <tr>
-          <td>1</td>
-          <td>HPBX</td>
-          <td>ON</td>
-          <td>Auto Attendant</td>
-          <td>AutoAttendant</td>
-          <td>$20.00</td>
-          <td>$0.00</td>
-          <td>$20.00</td>
-        </tr>
-        <tr>
-          <td>9</td>
-          <td>Voice</td>
-          <td>ON</td>
-          <td>Configuration/Set up Fee: HPBX</td>
-          <td>Configuration fee for Hosted PBX</td>
-          <td>$25.00 </td>
-          <td>$225.00</td>
-          <td>$0.00</td>
-        </tr>
-        <tr>
-          <td>8</td>
-          <td>HPBX</td>
-          <td>ON</td>
-          <td>HPBX - Advanced User</td>
-          <td>Hosted PBX - Advanced User</td>
-          <td>$23.95</td>
-          <td>$0.00</td>
-          <td>$191.60</td>
-        </tr>
-        <tr>
-          <td colspan="5" style="border:none;"></td>
+          <td colspan="4" style="border:none;"></td>
           <td>Subtotal:</td>
-          <td>$225.00</td>
-          <td>$265.60</td>
+          <td>${!TotalMRC}</td>
+          <td>${!TotalNRC}</td>
         </tr>
         <tr style="background-color:rgb(17, 62, 131);color:white;">
-          <td colspan="5" style="border:none;"></td>
+          <td colspan="4" style="border:none;"></td>
           <td>TOTAL:</td>
-          <td>$225.00</td>
-          <td>$265.60</td>
+          <td>${!TotalMRC}</td>
+          <td>${!TotalNRC}</td>
         </tr>
        </table>
     </div> 

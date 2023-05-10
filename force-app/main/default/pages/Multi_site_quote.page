@@ -1,4 +1,4 @@
-<apex:page sidebar="false" showHeader="false" applyBodyTag="false" standardStylesheets="true" applyHtmlTag="false">
+<apex:page standardController="ChikPeaTOM__Quote__c" extensions="QuotePageController" sidebar="false" showHeader="false" applyBodyTag="false" standardStylesheets="true" applyHtmlTag="false">
   <body>
     <!-- Header -->
     <div style="position: running(header);" name="header2">
@@ -120,57 +120,6 @@
           <td>$118.00</td>
         </tr>
         <tr>
-          <td>1</td>
-          <td>Activation</td>
-          <td>ON</td>
-          <td>Telco Activation/Install Fee: FTTB
-            10X10 ON/QC</td>
-          <td></td>
-          <td>$160.00</td>
-          <td>$160.00</td>
-          <td>$0.00</td>
-        </tr>
-        <tr>
-          <td>1</td>
-          <td>Dry-Loop</td>
-          <td>ON</td>
-          <td>FTTB Dry Loop</td>
-          <td></td>
-          <td>$13.00</td>
-          <td>$0.00</td>
-          <td>$13.00</td>
-        </tr>
-        <tr>
-          <td>1</td>
-          <td>Config</td>
-          <td>ON</td>
-          <td>Dry Loop Install FTTB: ON/QC</td>
-          <td></td>
-          <td>$30.00</td>
-          <td>$30.00</td>
-          <td>$0.00</td>
-        </tr>
-        <tr>
-          <td>1</td>
-          <td>Network-Equipment</td>
-          <td>ON</td>
-          <td>Fortigate 30E</td>
-          <td>Fortigate Firewall</td>
-          <td>$465.00</td>
-          <td>$465.00</td>
-          <td>$0.00</td>
-        </tr>
-        <tr>
-          <td>1</td>
-          <td>Technician</td>
-          <td>ON</td>
-          <td>Onsite Technician: Installation Fee</td>
-          <td></td>
-          <td>$250.00</td>
-          <td>$250.00</td>
-          <td>$0.00</td>
-        </tr>
-        <tr>
           <td colspan="5" style="border:none;"></td>
           <td>Subtotal</td>
           <td>$905.00</td>
@@ -178,7 +127,72 @@
         </tr>
        </table>
     </div> 
-    <!-- Item table 2 -->
+
+    <!-- <div class="Item-table" style="padding-top:8px;">
+      <table style="width:100%;font-size:13px;border-collapse:collapse;">
+        <tr style="background-color:rgb(17, 62, 131);color:white;">
+          <td colspan="8" style="padding:5px 0;">CO413 - Calvin Klein #413 300 Taylor Road</td>
+        </tr>
+        <tr>
+          <th>Qty</th>
+          <th>Item</th>
+          <th></th>
+          <th></th>
+          <th>Description</th>
+          <th>Unit Price</th>
+          <th>Total NRC</th>
+          <th>Total MRC</th>
+        </tr>
+        <tr>
+          <td>1</td>
+          <td>Cable</td>
+          <td>ON</td>
+          <td>Cable 20Mb x 10Mb</td>
+          <td>Cable 20 Mbps / 10 Mbps</td>
+          <td>$76.95</td>
+          <td>$0.00</td>
+          <td>$76.95</td>
+        </tr>
+        <tr>
+          <td>1</td>
+          <td>Activation</td>
+          <td>ON</td>
+          <td>Telco Activation/Install Fee: CABLE
+            20x10 ON</td>
+          <td></td>
+          <td>$129.95</td>
+          <td>$129.95</td>
+          <td>$0.00</td>
+        </tr>
+        <tr>
+          <td>1</td>
+          <td>Network-Equipment</td>
+          <td>ON</td>
+          <td>Fortigate 30E</td>
+          <td>Fortigate Firewall</td>
+          <td>$465.00</td>
+          <td>$465.00</td>
+          <td>$0.00</td>
+        </tr>
+        <tr>
+          <td>1</td>
+          <td>Technician</td>
+          <td>ON</td>
+          <td>Onsite Technician: Installation Fee</td>
+          <td></td>
+          <td>$250.00</td>
+          <td>$250.00</td>
+          <td>$0.00</td>
+        </tr>
+        <tr>
+          <td colspan="5" style="border:none;"></td>
+          <td>Subtotal</td>
+          <td>$844.95</td>
+          <td>$76.95</td>
+        </tr>
+       </table>
+    </div> 
+   
     <div class="Item-table" style="padding-top:8px;">
       <table style="width:100%;font-size:13px;border-collapse:collapse;">
         <tr style="background-color:rgb(17, 62, 131);color:white;">
@@ -243,7 +257,7 @@
         </tr>
        </table>
     </div> 
-    <!-- Item table 3 -->
+    
     <div class="Item-table" style="padding-top:8px;">
       <table style="width:100%;font-size:13px;border-collapse:collapse;">
         <tr style="background-color:rgb(17, 62, 131);color:white;">
@@ -307,72 +321,7 @@
           <td>$76.95</td>
         </tr>
        </table>
-    </div> 
-    <!-- Item table 4 -->
-    <div class="Item-table" style="padding-top:8px;">
-      <table style="width:100%;font-size:13px;border-collapse:collapse;">
-        <tr style="background-color:rgb(17, 62, 131);color:white;">
-          <td colspan="8" style="padding:5px 0;">CO413 - Calvin Klein #413 300 Taylor Road</td>
-        </tr>
-        <tr>
-          <th>Qty</th>
-          <th>Item</th>
-          <th></th>
-          <th></th>
-          <th>Description</th>
-          <th>Unit Price</th>
-          <th>Total NRC</th>
-          <th>Total MRC</th>
-        </tr>
-        <tr>
-          <td>1</td>
-          <td>Cable</td>
-          <td>ON</td>
-          <td>Cable 20Mb x 10Mb</td>
-          <td>Cable 20 Mbps / 10 Mbps</td>
-          <td>$76.95</td>
-          <td>$0.00</td>
-          <td>$76.95</td>
-        </tr>
-        <tr>
-          <td>1</td>
-          <td>Activation</td>
-          <td>ON</td>
-          <td>Telco Activation/Install Fee: CABLE
-            20x10 ON</td>
-          <td></td>
-          <td>$129.95</td>
-          <td>$129.95</td>
-          <td>$0.00</td>
-        </tr>
-        <tr>
-          <td>1</td>
-          <td>Network-Equipment</td>
-          <td>ON</td>
-          <td>Fortigate 30E</td>
-          <td>Fortigate Firewall</td>
-          <td>$465.00</td>
-          <td>$465.00</td>
-          <td>$0.00</td>
-        </tr>
-        <tr>
-          <td>1</td>
-          <td>Technician</td>
-          <td>ON</td>
-          <td>Onsite Technician: Installation Fee</td>
-          <td></td>
-          <td>$250.00</td>
-          <td>$250.00</td>
-          <td>$0.00</td>
-        </tr>
-        <tr>
-          <td colspan="5" style="border:none;"></td>
-          <td>Subtotal</td>
-          <td>$844.95</td>
-          <td>$76.95</td>
-        </tr>
-       </table>
-    </div>
+    </div> -->
     
   </body>
 </apex:page>

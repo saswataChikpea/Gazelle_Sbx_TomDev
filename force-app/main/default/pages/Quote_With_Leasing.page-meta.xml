@@ -4,4 +4,9 @@
     <availableInTouch>false</availableInTouch>
     <confirmationTokenRequired>false</confirmationTokenRequired>
     <label>Quote With Leasing</label>
+    <packageVersions>
+        <majorNumber>1</majorNumber>
+        <minorNumber>78</minorNumber>
+        <namespace>ChikPeaTOM</namespace>
+    </packageVersions>
 </ApexPage>
