@@ -1,0 +1,165 @@
+<!-- sldsValidatorIgnore -->
+<template>
+    <!-- <lightning-card> -->
+        <div class="dcf-details">
+            <span class="details-heading">Phase Details</span>
+            <table class="slds-table slds-table_cell-buffer slds-table_bordered">
+                <tbody style="font-size: medium;">
+                    <tr>
+                        <td>
+                            Title :
+                        </td>
+                        <td>
+                            test name
+                        </td>
+                        <th>
+                            Opportunity :
+                        </th>
+                        <td>
+                            test name
+                        </td>
+                        <th>
+                            Location :
+                        </th>
+                        <td>
+                            test name
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>
+                            Requirement :
+                        </th>
+                        <td>
+                            test name
+                        </td>
+                        <th>
+                            Time :
+                        </th>
+                        <td>
+                            test name
+                        </td>
+                        <th>
+                            Time :
+                        </th>
+                        <td>
+                            test name
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <span class="details-heading">DCF Lines </span>
+
+                        
+                            <table class="slds-table slds-table_cell-buffer slds-table_bordered">
+                                <thead>
+                                    <tr class="slds-line-height_reset">
+                                        <!-- <th if:true={editData}></th> -->
+
+                                        <th class="" scope="col">
+                                            <div class="slds-truncate slds-line-clamp" style="display: flex;"
+                                                title="Name">
+                                                Name
+                                            </div>
+
+                                        </th>
+                                        <th class="" scope="col">
+                                            <div class="slds-truncate slds-line-clamp" style="display: flex;"
+                                                title="Name">
+                                                Location
+                                            </div>
+                                        </th>
+                                        <th class="" scope="col">
+                                            <div class="slds-truncate slds-line-clamp" style="display: flex;"
+                                                title="Name">
+                                                Requirement
+                                            </div>
+                                        </th>
+                                        <th class="" scope="col">
+                                            <div class="slds-truncate slds-line-clamp" style="display: flex;"
+                                                title="Name">
+                                                Term
+                                            </div>
+                                        </th>
+                                        <th class="" scope="col">
+                                            <div class="slds-truncate slds-line-clamp" style="display: flex;"
+                                                title="Name">
+                                                Availability
+                                            </div>
+                                        </th>                                        
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <template for:each={dcf} for:item="dcf">
+                                        <!-- <tr key={dcf.Id}> -->
+                                            <!-- <p>{dcf.Id}</p>
+                                            <p>{dcf.Name}</p> -->
+                                            <template for:each={dcf.DCF_Lines__r} for:item="dcfLines">
+                                                <tr key={dcfLines.Id}>
+                                                    <!-- <p>{dcfLines.Id}</p>
+                                                    <p>{dcfLines.Name}</p> -->
+                                                    <td>{dcfLines.Name}</td>
+                                                    <td>{dcfLines.Location__c}</td>
+                                                    <td>{dcfLines.Requirement__c}</td>
+                                                    <td>{dcfLines.Term__c}</td>
+                                                    <td>{dcfLines.Availability__c}</td>
+                                                </tr>
+                                            </template>
+                                        <!-- </tr> -->
+                                    </template>
+                                    <tr>
+                                        <th>
+                                            <lightning-icon icon-name="utility:new" variant="success" style="cursor:pointer;" 
+                                                alternative-text="Add" size="small" title="Add new Dcf Line" onclick={addNewDcfLine}>
+                                            </lightning-icon>
+                                        </th>
+                                    </tr>
+                                </tbody>
+                            </table>
+                <!-- {recordId} -->
+    <!-- </lightning-card> -->
+
+    <!-- <div class="new-dcfLine">
+        <template if:true={showNewDcfLine}>
+            <c-add-new-dcf-line>
+            </c-add-new-dcf-line>
+        </template>
+    </div> -->
+    <template if:true={showNewDcfLine}>
+        <lightning-card title="Add new DCF Lines">
+            <lightning-record-edit-form
+                object-api-name={newDCFline}
+                onsuccess={handleSuccess}
+            >
+        <lightning-layout multiple-rows>
+            <lightning-layout-item size="6" padding="arround-small">
+                <lightning-input-field field-name="DCF__c"></lightning-input-field>
+            </lightning-layout-item>
+            <lightning-layout-item size="6" padding="arround-small">
+                <lightning-input-field field-name="Name"></lightning-input-field>
+            </lightning-layout-item>
+            <lightning-layout-item size="6" padding="arround-small">
+                <lightning-input-field field-name="Location__c"></lightning-input-field>
+            </lightning-layout-item>
+            <lightning-layout-item size="6" padding="arround-small">
+                <lightning-input-field field-name="Requirement__c"></lightning-input-field>
+            </lightning-layout-item>
+            <lightning-layout-item size="6" padding="arround-small">
+                <lightning-input-field field-name="Term__c"></lightning-input-field>
+            </lightning-layout-item>
+            <lightning-layout-item size="6" padding="arround-small">
+                <lightning-input-field field-name="Availability__c"></lightning-input-field>
+            </lightning-layout-item>
+        </lightning-layout>
+    
+        <div class="slds-var-m-top_medium">
+            <lightning-button variant="brand" type="submit" label="Save">
+            </lightning-button>
+            <lightning-button class="slds-m-right_small" type="cancel" label="Cancel" onclick={closeModal}>
+            </lightning-button>
+        </div>
+        </lightning-record-edit-form>
+        </lightning-card>
+    </template>
+</template>
