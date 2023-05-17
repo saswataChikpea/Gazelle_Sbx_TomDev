@@ -2,7 +2,7 @@
 <template>
     <!-- <lightning-card> -->
     <template if:true={newDCFRecord}>
-        <span class="details-heading">Enter DCF Details</span>
+        <span class="details-heading">Enter Data Collection Form Details</span>
         <lightning-record-edit-form object-api-name={newDCF} onsuccess={handleSuccessDCF}>
 
             <div class="slds-grid slds-gutters">
@@ -10,12 +10,8 @@
 
                     <lightning-input-field field-name="Location__c"></lightning-input-field>
 
-                    <lightning-input-field field-name="Name"></lightning-input-field>
-                    <lightning-input-field field-name="Availability__c"></lightning-input-field>
                 </div>
                 <div class="slds-col slds-size_1-of-2">
-                    <lightning-input-field field-name="Opportunity__c" value={recordId}></lightning-input-field>
-                    <lightning-input-field field-name="Requirement__c"></lightning-input-field>
                     <lightning-input-field field-name="Time__c"></lightning-input-field>
                 </div>
             </div>
@@ -23,7 +19,7 @@
 
 
 
-
+            
             <div class="slds-var-m-top_medium">
                 <lightning-button variant="brand" type="submit" label="Save">
                 </lightning-button>
@@ -33,25 +29,27 @@
         </lightning-record-edit-form>
     </template>
     <div class="dcf-details">
-        
-       
 
-        <lightning-record-view-form object-api-name={newDCF} record-id={DCFId}>
-            <div class="slds-grid slds-gutters">
-                <div class="slds-col slds-size_1-of-2">
-                    <lightning-output-field field-name="Name"> </lightning-output-field>
-                    <lightning-output-field field-name="Location__c"> </lightning-output-field>
+
+        <template if:false={newDCFRecord}>
+            <lightning-record-view-form object-api-name={newDCF} record-id={DCFId}>
+                <div class="slds-grid slds-gutters">
+                    <div class="slds-col slds-size_1-of-2">
+                        <lightning-output-field field-name="Name"> </lightning-output-field>
+                        <lightning-output-field field-name="Location__c"> </lightning-output-field>
+                    </div>
+                    <div class="slds-col slds-size_1-of-2">
+                        <lightning-output-field field-name="Opportunity__c"></lightning-output-field>
+                        <lightning-output-field field-name="Requirement__c"></lightning-output-field>
+                        <lightning-output-field field-name="Time__c"></lightning-output-field>
+                    </div>
                 </div>
-                <div class="slds-col slds-size_1-of-2">
-                    <lightning-output-field field-name="Opportunity__c"></lightning-output-field>
-                    <lightning-output-field field-name="Requirement__c"></lightning-output-field>
-                    <lightning-output-field field-name="Time__c"></lightning-output-field>
-                </div>
-            </div>
-        </lightning-record-view-form>
+            </lightning-record-view-form>
+        </template>
+        
     </div>
 
-    <span class="details-heading">DCF Lines </span>
+    <span class="details-heading"> Existing Data Collection Form Lines </span>
 
 
     <table class="slds-table slds-table_cell-buffer slds-table_bordered">
@@ -66,22 +64,22 @@
 
                 </th>
                 <th class="" scope="col">
-                    <div class="slds-truncate slds-line-clamp" style="display: flex;" title="Name">
+                    <div class="slds-truncate slds-line-clamp" style="display: flex;" title="Location">
                         Location
                     </div>
                 </th>
                 <th class="" scope="col">
-                    <div class="slds-truncate slds-line-clamp" style="display: flex;" title="Name">
+                    <div class="slds-truncate slds-line-clamp" style="display: flex;" title="Requirement">
                         Requirement
                     </div>
                 </th>
                 <th class="" scope="col">
-                    <div class="slds-truncate slds-line-clamp" style="display: flex;" title="Name">
+                    <div class="slds-truncate slds-line-clamp" style="display: flex;" title="Term">
                         Term
                     </div>
                 </th>
                 <th class="" scope="col">
-                    <div class="slds-truncate slds-line-clamp" style="display: flex;" title="Name">
+                    <div class="slds-truncate slds-line-clamp" style="display: flex;" title="Availability">
                         Availability
                     </div>
                 </th>
@@ -91,17 +89,18 @@
 
             <!-- <tr key={dcf.Id}> -->
             <!-- <p>{dcf.Id}</p>
-                                            <p>{dcf.Name}</p> -->
-            <template for:each={dcf} for:item="dcfLines">
-                <tr key={dcfLines.Id}>
-                   
-                    <td>{dcfLines.Name}</td>
-                    <td>{dcfLines.Location__c}</td>
-                    <td>{dcfLines.Requirement__c}</td>
-                    <td>{dcfLines.Term__c}</td>
-                    <td>{dcfLines.Availability__c}</td>
+            <p>{dcf.Name}</p> -->
+        <template for:each={dcfLines} for:item="dcf">
+            <template for:each={dcf.DCF_Lines__r} for:item="dcfLine">
+                <tr key={dcfLine.Id}>
+                    <td>{dcfLine.Name}</td>
+                    <td>{dcfLine.Location__c}</td>
+                    <td>{dcfLine.Requirement__c}</td>
+                    <td>{dcfLine.Term__c}</td>
+                    <td>{dcfLine.Availability__c}</td>
                 </tr>
             </template>
+        </template>
             <!-- </tr> -->
             <tr>
                 <th>
@@ -128,7 +127,7 @@
                 <div class="slds-grid slds-gutters">
                     <div class="slds-col slds-size_1-of-2">
 
-                        <lightning-input-field field-name="DCF__c" class="contactName"></lightning-input-field>
+                        <lightning-input-field field-name="DCF__c" class="contactName" value = {DCFId}></lightning-input-field>
 
                         <lightning-input-field field-name="Name" class="contactName"></lightning-input-field>
                         <lightning-input-field field-name="Availability__c" class="contactName"></lightning-input-field>
