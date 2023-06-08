@@ -20,12 +20,14 @@
 
   <div class="detail">
     <div style="position: absolute;line-height: 1px;">
-        <p><b>Date:</b>    3/22/2022</p>
-        <p><b>Exp:</b>     4/21/2022</p>
-        <p><b>Quote:   2020-12-22-01</b></p>
+        <p><b>Date:</b>    <apex:outputText value="{0,date,dd/MM/yyyy}">
+                              <apex:param value="{!NOW()}"/>
+                            </apex:outputText></p>
+        <p><b>Exp:</b>     {!ExpDate}</p>
+        <p><b>Quote:   {!quoteName}</b></p>
     </div>
     <div style="position: relative;padding-left:500px;align-items: center;">
-      <p><b>TO:</b> Klinic, Inc.</p>
+      <p><b>TO:</b> {!accountName}</p>
     </div>
   </div>
 <div style="padding-top:50px;">
@@ -36,17 +38,18 @@
       <th>Term</th>
     </tr>
     <tr align="center">
-      <td style="border:2px solid black;">Tanya Shaitulla / Gazelle Health</td> 
-      <td style="border:2px solid black;">Contact Centre Transformation</td>
+      <td style="border:2px solid black;">Gazelle Health</td> 
+      <td style="border:2px solid black;">{!oppName}</td>
       <td style="border:2px solid black;">Fixed - Project</td>
     </tr>
   </table>
 </div>
 <!-- Item table -->
+<apex:repeat value="{!premiseIdToQuoteLineMap2}" var="mapKey">
 <div style="padding-top:8px;">
   <table style="width: 100%;padding-top: 10px;border-collapse:collapse;font-size: 15px;">
     <tr style="background-color:rgb(220, 43, 226);color:white;">
-      <td colspan="6">SITE:</td>
+      <td colspan="6">SITE:{!mapKey}</td>
     </tr>
     <tr>
       <th style="border-top: 2px solid black; border-bottom: 2px solid black;">Qty</th>
@@ -56,8 +59,8 @@
       <th style="border-top: 2px solid black; border-bottom: 2px solid black;">Total NRC</th>
       <th style="border-top: 2px solid black; border-bottom: 2px solid black;">Total MRC</th>
     </tr>
-    <apex:repeat value="{!quoteLineDetail}" var="a">
-          <tr style="background-color:rgb(235, 235, 235)">
+        <apex:repeat value="{!premiseIdToQuoteLineMap2[mapKey]}" var="a">
+          <tr style="background-color:rgb(235, 235, 235);padding: 0 20px;">
             <td>{!a.ChikPeaTOM__Qty__c}</td>
             <td>{!a.ChikPeaTOM__Service_Plan__r.name}</td>
             <td>{!a.ChikPeaTOM__Service_Plan__r.ChikPeaTOM__Description__c}</td>
@@ -88,6 +91,7 @@
     </tr>
   </table>
 </div>
+</apex:repeat>
 
 <!-- footer -->
 <div class="footer" style="page-break-after:always;font-family:Arial, Helvetica, sans-serif;font-size:8pt;color:#808080;text-align:center;position: running(footer);">
@@ -128,24 +132,24 @@
 <div style="padding-top: 20px;">
   <table style="width:100%;">
     <tr>
-      <th style="width:50%;text-align:center;">Klinic, Inc.,</th>
+      <th style="width:50%;text-align:center;">{!accountName}</th>
       <th style="width:50%;text-align:center;">Gazelle Integrated Communications Inc.</th>
     </tr>
-    <tr>
-      <td>Signature____________________</td>
-      <td>Signature____________________</td>
+    <tr align="right">
+      <td style="padding-top:10px;">Signature_____________________________________</td>
+      <td style="padding-top:10px;">Signature_____________________________________</td>
     </tr>
-    <tr>
-      <td>Name____________________</td>
-      <td>Name____________________</td>
+    <tr align="right">
+      <td style="padding-top:10px;">Name_____________________________________</td>
+      <td style="padding-top:10px;">Name_____________________________________</td>
     </tr>
-    <tr>
-      <td>Title____________________</td>
-      <td>Title____________________</td>
+    <tr align="right">
+      <td style="padding-top:10px;">Title_____________________________________</td>
+      <td style="padding-top:10px;">Title_____________________________________</td>
     </tr>
-    <tr>
-      <td>Date____________________</td>
-      <td>Date____________________</td>
+    <tr align="right">
+      <td style="padding-top:10px;">Date_____________________________________</td>
+      <td style="padding-top:10px;">Date_____________________________________</td>
     </tr>
   </table>
 </div>

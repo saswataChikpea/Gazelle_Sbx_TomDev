@@ -1,0 +1,93 @@
+<template>
+    <template if:true={error}>
+        Something is wrong
+    </template>
+    <template if:false={error}>
+        <template if:true={recordId}>
+            <c-search-product record-id={recordId}
+                obj-name = "ChikPeaTOM__Quote__c"
+                child-obj-name = "ChikPeaTOM__Quote_Line__c"
+                display-selected-fields-details = {displaySelectedFieldsDetails}
+                accordion-title = 'Click to view Existing Quote Line(s)'
+                title="Quote Lines(s)"
+                onhandleplanselected = {handlePlanSelected}>
+            </c-search-product>
+            
+            <template if:true={showEquipments}>
+                <template if:true={savedQL}>
+                    <c-add-equipments
+                        record-id = {savedQL}
+                        obj-name = "ChikPeaTOM__Quote__c"
+                        plan-ids = {planIds}
+                        selected-parent-plan-id = {selectedParentPlanId}
+                        selected-parent-plan-name = {selectedParentPlanName}
+                        onhandlesave = {handleEqpSave}
+                        onhandleclosemodal = {hideEqp}
+                        onclosequickaction = {hideEqp}>
+                    </c-add-equipments>
+                </template>
+            </template>
+            
+    </template>
+
+        <!-- add plan modal -->
+        <template if:true={bShowModal}>
+            <section role="dialog" tabindex="-1"
+            aria-labelledby="modal-heading-01"
+            aria-modal="true"
+            aria-describedby="modal-content-id-1"
+            class="slds-modal slds-fade-in-open" style="background: #0000006b;">
+                <div class="slds-modal__container">
+                    <!-- modal header -->
+                    <header class="slds-modal__header">
+                        <button class="slds-button slds-button_icon slds-modal__close slds-button_icon-inverse" title="Close" onclick={closeModal}>
+                            <lightning-icon icon-name="utility:close" alternative-text="close" variant="inverse" size="small" ></lightning-icon>
+                        </button>
+                        <h2 id="modal-heading-01" class="slds-text-heading_medium slds-hyphenate">Related Product</h2>
+                        <p class="slds-m-top_x-small">
+                            Adding <a href={selectedParentPlanId} target="_blank"><b>{selectedParentPlanName}</b></a> 
+                            &nbsp; and its related plan(s)
+                            
+                        </p>
+                    </header>
+                    <!-- modal body -->
+                    <!-- required plans  -->
+                    <div class="slds-modal__content slds-p-around_medium" id="modal-content-id-0">
+                        <lightning-card>
+                            <h3 slot="title">
+                                <!-- <c-chik-pea-sticks></c-chik-pea-sticks> -->
+                                Related Plan(s)
+                            </h3>
+                            <div class="slds-m-around_medium">
+                                <template if:true={tobeAddedRecords}>
+                                    <lightning-datatable
+                                        key-field="planId"
+                                        data={tobeAddedRecords}
+                                        columns={columns}
+                                        onrowselection={handleToBeAddedSelection}
+                                        selected-rows={preselectedRows}
+                                        onsave={handleSave}
+                                        draft-values={draftValues}
+                                        oncellchange={handleCellChange}>
+                                    </lightning-datatable>
+                                </template>
+                            </div>
+                        </lightning-card>
+                    </div>
+                    <!-- required plans end -->
+                    <!-- modal footer start-->
+                    <footer class="slds-modal__footer">
+                        <div class="slds-m-right_medium" style="display: inline;">
+                            <lightning-button 
+                                label="Cancel" title="Cancel" onclick={closeModal}></lightning-button>
+                        </div>
+                        <div class="slds-m-right_medium" style="display: inline;">
+                            <lightning-button variant="brand"
+                                label="Save" title="Save" onclick={handleSave}></lightning-button>
+                        </div>        
+                    </footer>
+                </div>
+            </section>        
+        </template>
+    </template>
+</template>

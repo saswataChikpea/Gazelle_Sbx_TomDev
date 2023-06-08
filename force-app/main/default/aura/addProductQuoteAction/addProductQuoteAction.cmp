@@ -1,0 +1,12 @@
+<aura:component implements="lightning:isUrlAddressable,flexipage:availableForRecordHome,force:hasRecordId,force:lightningQuickAction" access="global" >
+	<aura:attribute name="recordId" type="String" />
+	<lightning:navigation aura:id="navigation" />
+	<c:quoteAddProduct recordId="{!v.recordId}" onclosequickaction = "{!c.closeQuickAction}"/>
+	<aura:html tag="style">
+        .slds-modal__container {
+            width : 90% !important;
+            max-width : 90% !important;
+        	height : 100% !important;
+        }
+    </aura:html>
+</aura:component>

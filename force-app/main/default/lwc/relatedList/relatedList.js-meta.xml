@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LightningComponentBundle xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>50.0</apiVersion>
+    <isExposed>true</isExposed>
+    <targets>
+        <target>lightning__AppPage</target>
+        <target>lightning__RecordPage</target>
+        <target>lightning__HomePage</target>
+    </targets>
+    <targetConfigs>
+        <targetConfig targets="lightning__AppPage, lightning__HomePage, lightning__RecordPage">
+            <property name="childApiName" type="String" label="Child API name" description="API name of children records." />
+            <property name="parentRelationApiName" type="String" label="Parent Relation API name" description="Api name of parent" />
+            <property name="parentObjectId" type="String" label="Parent Id" description="Id of parent " />
+            <!--<property name="disaplayFields" type="String" label="Display Fields" description="Fields' api name in coma separated way" />
+            <property name="disaplayFieldsLabels" type="String" label="Display Fields" description="Fields' label in coma separated way should be in same sequence with disaplayFields" />-->
+            <property name="disaplayFieldsDetails" type="String" label="Display Fields Details" description="Insert fieldname, label, datatype and editable in JSON format" />
+            <property name="title" type="String" label="Page Title" description="Related list title" />
+        </targetConfig>
+    </targetConfigs>
+</LightningComponentBundle>

@@ -1,0 +1,13 @@
+.lwccard{
+    width: 2000px;
+}
+
+.slds-modal__container{
+    width: 1200;
+    /* max-width: 90% !important; */
+    
+}
+
+.custom-quick-action {
+    width: 1400px; /* Adjust the width as per your requirement */
+  }

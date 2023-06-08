@@ -1,0 +1,20 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction,lightning:actionOverride,lightning:isUrlAddressable" access="global" >    
+    
+    <aura:html tag="style">
+        .cuf-content {
+            padding: 0 0rem !important;
+        }
+        .slds-p-around--medium {
+            padding: 0rem !important;
+        }
+        .slds-modal__content{
+            overflow-y:hidden !important;
+            height:unset !important;
+            max-height:unset !important;
+        }
+    </aura:html>   
+    <aura:attribute name="recordId" type="String" access="public"/> 
+    <aura:handler name="change" value="{!v.pageReference}" action="{!c.reInit}"/>
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+    <c:updateDCFLines3 recordId="{!v.recordId}"/>
+</aura:component>

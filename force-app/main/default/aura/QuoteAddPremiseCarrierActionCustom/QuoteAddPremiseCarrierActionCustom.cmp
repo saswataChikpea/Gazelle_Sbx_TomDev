@@ -1,0 +1,12 @@
+<aura:component implements="force:lightningQuickAction,force:hasRecordId" access="global">
+    <aura:attribute name="recordId" type="String" />
+    <c:quoteAddPremiseCarrierCustom recordId="{!v.recordId}" onclosequickaction = "{!c.closeQuickAction}"/>
+    <aura:html tag="style">
+        .slds-modal__container {
+            width : 90% !important;
+            max-width : 90% !important;
+            height : 100% !important;
+        }
+    </aura:html>
+    <c:quoteAddPremiseCarrierCustom/>
+</aura:component>

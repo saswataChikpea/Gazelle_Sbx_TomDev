@@ -1,0 +1,82 @@
+<template>
+    <template if:true={error}>
+        Something is wrong
+    </template>
+    <template if:false={error}>
+        <div class="slds-grid slds-gutters">
+            <div class="slds-col slds-size_1-of-4" style="padding-right: 0px;">
+                <lightning-card title="Filter Plan" icon-name="standard:product_item">
+                    <div class="slds-m-around_medium">
+                        <div class="slds-m-around_medium">
+                            <lightning-input type="text" label="Enter Plan Name"
+                                onchange={handlePlanNameChange}></lightning-input>
+                        </div>
+                        <div class="slds-m-top_medium">
+                                <template if:true={picklistValues}>
+                                    <div class="slds-m-around_medium">
+                                        <lightning-combobox name="PlanCategory"
+                                            label="Plan Category"
+                                            value={value}
+                                            placeholder="-Select-"
+                                            options={picklistValues}
+                                            onchange={handleCategorySelected} >
+                                        </lightning-combobox>
+                                    </div>
+                                </template>
+                        </div>
+                        <div class="slds-m-top_medium">
+                            <template if:true={serviceTypePicklistValues}>
+                                <div class="slds-m-around_medium">
+                                    <lightning-combobox name="ServiceType"
+                                        label="Service Type"
+                                        value={value}
+                                        placeholder="-Select-"
+                                        options={serviceTypePicklistValues}
+                                        onchange={handleServiceTypeSelected} >
+                                    </lightning-combobox>
+                                </div>
+                            </template>
+                        </div>
+                        <div class="slds-m-top_medium">
+                            <div class="slds-m-around_medium">
+                                <lightning-input type="checkbox"
+                                    label="Is Active"
+                                    checked={isActive}
+                                    value={isActive}
+                                    onchange={handleChangeIsPlanActive}>
+                                </lightning-input>
+                            </div>
+                        </div>
+                    </div>
+                </lightning-card>
+            </div>
+            <div class="slds-col slds-size_3-of-4">
+                <lightning-card title="Service Plan(s)" icon-name="standard:product_item">
+                    <div class="slds-m-around_medium">
+                        <template if:true={recordFound}>
+                            <lightning-datatable
+                                key-field="Id"
+                                data={records}
+                                columns={columns}
+                                onrowaction={handleRowActions} 
+                                onrowselection={handleSelected}
+                                selected-rows={selectedRows}
+                                draft-values={draftValues}>
+                            </lightning-datatable>
+                        </template>
+                        <template if:false={recordFound}>
+                            <div class="slds-notify slds-notify_alert slds-theme_alert-texture slds-theme_info" role="alert">
+                                No records were found that matches your query
+                            </div>
+                        </template>
+                    </div>
+                </lightning-card>
+            </div>
+            <!-- Spinner -->
+            <div if:true={showLoadingSpinner}>
+                <lightning-spinner alternative-text="Loading" size="large"></lightning-spinner>
+            </div>
+        </div>
+        
+    </template>
+</template>

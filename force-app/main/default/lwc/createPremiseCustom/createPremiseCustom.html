@@ -1,0 +1,70 @@
+<template>
+    <template if:true={error}>
+        Failed to create Premise
+    </template>
+    <template if:true={fieldsInfo}>
+        <section role="dialog" tabindex="-1"
+            aria-labelledby="modal-heading-001"
+            aria-modal="true"
+            aria-describedby="modal-content-id-1"
+            class="slds-modal slds-fade-in-open" style="background: #0000006b;">
+            <div class="slds-modal__container">
+                <header class="slds-modal__header">
+                    <button class="slds-button slds-button_icon slds-modal__close slds-button_icon-inverse" title="Close" onclick={closePremiseModal}>
+                        <lightning-icon icon-name="utility:close" alternative-text="close" variant="inverse" size="small" ></lightning-icon>
+                    </button>
+                    <h2 id="modal-heading-001" class="slds-text-heading_medium slds-hyphenate">New Premise</h2>
+                </header>
+                <div class="slds-modal__content slds-p-around_medium" id="modal-content-id-0">
+                    <lightning-card title="Information" icon-name="standard:address">
+                        <div class="slds-m-around_medium">
+                            <div if:false={hideSpinner} class="slds-spinner_inline spinner-padding">
+                                <lightning-spinner variant="brand" 
+                                                   alternative-text="Loading"     
+                                                   size="medium">
+                                </lightning-spinner>
+                            </div>
+                            <div if:true={hideSpinner} class="slds-m-around_medium">
+                                <lightning-input name="Name" label="Name" required onchange={handleChange} class="slds-m-bottom_x-small"></lightning-input>
+                                <lightning-input name="ChikPeaTOM__Street_Addess__c" label={fieldsInfo.ChikPeaTOM__Street_Addess__c.label} onchange={handleChange} class="slds-m-bottom_x-small"></lightning-input>
+                                <lightning-input name="ChikPeaTOM__City__c" label={fieldsInfo.ChikPeaTOM__City__c.label} onchange={handleChange} class="slds-m-bottom_x-small"></lightning-input>
+                                <lightning-input name="ChikPeaTOM__State__c" label={fieldsInfo.ChikPeaTOM__State__c.label} onchange={handleChange} class="slds-m-bottom_x-small"></lightning-input>
+                                <lightning-input name="ChikPeaTOM__Postal_Code__c" label={fieldsInfo.ChikPeaTOM__Postal_Code__c.label} onchange={handleChange} class="slds-m-bottom_x-small"></lightning-input>
+                                <lightning-input name="ChikPeaTOM__Total_Bandwidth__c" label={fieldsInfo.ChikPeaTOM__Total_Bandwidth__c.label} onchange={handleChange} class="slds-m-bottom_x-small"></lightning-input>
+                                <template if:true={NetCategoryPicklistValues}>
+                                    <lightning-combobox name="ChikPeaTOM__Net_Category__c"
+                                                        label={fieldsInfo.ChikPeaTOM__Net_Category__c.label}
+                                                        value={value}
+                                                        placeholder="-Select-"
+                                                        options={NetCategoryPicklistValues.values}
+                                                        onchange={handleChange} >
+                                    </lightning-combobox>
+                                </template><br/>
+                                <lightning-input name="ChikPeaTOM__Suburb_County__c" label={fieldsInfo.ChikPeaTOM__Suburb_County__c.label} onchange={handleChange} class="slds-m-bottom_x-small"></lightning-input>
+                                <template if:true={CountryPicklistValues}>
+                                    <lightning-combobox name="ChikPeaTOM__Country__c"
+                                                        label={fieldsInfo.ChikPeaTOM__Country__c.label}
+                                                        value={value}
+                                                        placeholder="-Select-"
+                                                        options={CountryPicklistValues.values}
+                                                        onchange={handleChange} >
+                                    </lightning-combobox>
+                                </template>    
+                            </div>
+                        </div>
+                    </lightning-card>
+                </div>
+                <footer class="slds-modal__footer">
+                    <div class="slds-m-right_medium" style="display: inline;">
+                        <lightning-button 
+                            label="Cancel" title="Cancel" onclick={closePremiseModal}></lightning-button>
+                    </div>
+                    <div class="slds-m-right_medium" style="display: inline;">
+                        <lightning-button variant="brand"
+                            label="Save" title="Save" onclick={createPremiseRecord}></lightning-button>
+                    </div>        
+                </footer>
+            </div>
+        </section>   
+    </template>     
+</template>

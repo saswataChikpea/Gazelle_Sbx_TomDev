@@ -1,0 +1,48 @@
+<template>
+    <section role="dialog" tabindex="-1"
+    aria-labelledby="modal-heading-001"
+    aria-modal="true"
+    aria-describedby="modal-content-id-1"
+    class="slds-modal slds-fade-in-open" style="background: #0000006b;">
+        <div class="slds-modal__container">
+            <!-- modal header -->
+            <header class="slds-modal__header">
+                <button class="slds-button slds-button_icon slds-modal__close slds-button_icon-inverse" title="Close" onclick={closeCarrierModal}>
+                    <lightning-icon icon-name="utility:close" alternative-text="close" variant="inverse" size="small" ></lightning-icon>
+                </button>
+                <h2 id="modal-heading-001" class="slds-text-heading_medium slds-hyphenate">New Carrier</h2>
+            </header>
+            <!-- modal body -->
+            <!-- required plans  -->
+            <div class="slds-modal__content slds-p-around_medium" id="modal-content-id-0">
+                <lightning-card title="Insert New Carrier" icon-name="custom:custom14">
+                    <div class="slds-m-around_medium">
+                        <div class="slds-m-around_medium">
+                            <lightning-input label="Carrier Name" onchange={handleNameChange} class="slds-m-bottom_x-small"></lightning-input>
+                                <c-lwc-custom-lookup-custom object-name="Contact" 
+                                    object-label="Contact"
+                                    icon-name = "standard:contact"
+                                    lookuplabel="Carrier Contact"
+                                    onselected={handleContactChange}
+                                    hidecreatenew=true>
+                                </c-lwc-custom-lookup-custom>
+                            <lightning-input label="Address" onchange={handleAddressChange} class="slds-m-bottom_x-small"></lightning-input>                
+                        </div>
+                    </div>
+                </lightning-card>
+            </div>
+            <!-- required plans end -->
+            <!-- modal footer start-->
+            <footer class="slds-modal__footer">
+                <div class="slds-m-right_medium" style="display: inline;">
+                    <lightning-button 
+                        label="Cancel" title="Cancel" onclick={closeCarrierModal}></lightning-button>
+                </div>
+                <div class="slds-m-right_medium" style="display: inline;">
+                    <lightning-button variant="brand"
+                        label="Save" title="Save" onclick={createCarrier}></lightning-button>
+                </div>        
+            </footer>
+        </div>
+    </section>        
+</template>

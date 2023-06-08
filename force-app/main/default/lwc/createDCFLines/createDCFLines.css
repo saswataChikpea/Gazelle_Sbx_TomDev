@@ -2,6 +2,13 @@
     margin: 5px;
     padding: 5px;
 }
-.dcf-details{
+
+
+.dcf-details {
     margin-bottom: 2rem;
+    font-weight: bold;
+}
+
+.dcfView{
+    background-color: rgb(184, 249, 227);
 }

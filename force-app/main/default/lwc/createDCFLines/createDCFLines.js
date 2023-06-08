@@ -8,7 +8,7 @@ import { ShowToastEvent } from 'lightning/platformShowToastEvent';
 
 export default class CreateDCFLines extends LightningElement {
     @track phaseDetails = true;
-    @track record = {};
+    @track record;
     @api recordId;
     @track newDCFRecord = true;
     @track showNewDcfLine;
@@ -23,17 +23,35 @@ export default class CreateDCFLines extends LightningElement {
     @wire(fetchDcf, { dcfId: '$recordId' })
     wiredFetchDcf({ error, data }) {
         if (data) {
-            this.record = data[0];
-            this.newDCFRecord = false;
-            this.DCFId = this.record.Id;
-            console.log('DCFId', this.DCFId);
-            console.log('record', this.record);
+            this.record = data;
+                console.log("data",data);
+                if(data.length >0 ){
+                    this.newDCFRecord = false;
+                    this.DCFId = data[0].Id
+                }
+                console.log('DCFId-', this.DCFId);
+                console.log('record', this.record);
             this.error = undefined;
         } else if (error) {
             console.error('Error:', error);
             this.error = error;
         }
     }
+    // renderedCallback(){
+    //     fetchDcf({dcfId : this.recordId})
+    //         .then((data)=>{
+    //             this.record = data;
+    //             console.log("data",data);
+    //             if(data.length >0 ){
+    //                 this.newDCFRecord = false;
+    //                 this.DCFId = data[0].Id
+    //             }
+    //             console.log('DCFId', this.DCFId);
+    //             console.log('record', this.record);
+    //         }).catch((err)=>{
+    //             console.log(err);
+    //         })
+    // }
 
     @wire(dcfLines, { oppId: '$recordId' })
     wiredDcfLines(result) {
@@ -55,6 +73,10 @@ export default class CreateDCFLines extends LightningElement {
 
     closeModal() {
         this.showNewDcfLine = false;
+    }
+    closeDCFModal() {
+        this.showNewDcfLine = false;
+        this.newDCFRecord=false
     }
 
     handleSuccessDCF(event) {

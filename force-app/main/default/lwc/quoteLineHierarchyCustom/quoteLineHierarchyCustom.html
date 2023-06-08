@@ -1,0 +1,80 @@
+<template>
+    <!-- <div class="slds-p-around_medium">
+        <lightning-card> -->
+            <!-- <div>
+                <lightning-record-view-form
+                    record-id={recordId}
+                    object-api-name="ChikPeaTOM__Quote__c">
+                    <div class="slds-grid">
+                        <div class="slds-col slds-size_1-of-3">
+                            {title}
+                                <a href = {qu_url} target="_blank">
+                                    {qName}
+                                </a>
+                            </div>
+                            <div class="slds-col slds-size_1-of-3 slds-text-title_bold">
+                                <lightning-output-field field-name="ChikPeaTOM__Order_Type__c" variant="label-bold"></lightning-output-field>
+                            </div>
+                            <div class="slds-col slds-size_1-of-3 slds-text-title_bold">
+                                <lightning-output-field field-name="ChikPeaTOM__Status__c" variant="label-bold"></lightning-output-field>
+                            </div>
+
+                    </div>
+                </lightning-record-view-form>
+            </div> -->
+            <!-- <div slot="footer" class="slds-m-around_medium slds-text-align_left">
+                <lightning-record-view-form
+                    record-id={recordId}
+                    object-api-name="ChikPeaTOM__Quote__c">
+                    <div class="slds-grid">
+                        <div class="slds-col slds-size_1-of-2">
+                            <lightning-output-field field-name="Name"></lightning-output-field>
+                            <lightning-output-field field-name="ChikPeaTOM__Account__c"></lightning-output-field>
+                        </div>
+                        <div class="slds-col slds-size_1-of-2">
+                            <lightning-output-field field-name="ChikPeaTOM__Order_Type__c"></lightning-output-field>
+                            <lightning-output-field field-name="ChikPeaTOM__Status__c"></lightning-output-field>
+                        </div>
+                    </div>
+                </lightning-record-view-form>
+            </div> -->
+        <!-- </lightning-card>
+    </div> -->
+    <div class="slds-p-around_medium lgc-bg">
+        
+        <template if:true={gridData}>
+            <p class="slds-text-heading_small">Add Premise &amp; Carrier</p><br/>
+            <lightning-tree-grid
+                columns={gridColumns}
+                data={gridData}
+                key-field="name"
+                hide-checkbox-column
+                expanded-rows={currentExpanded}
+                onrowaction={handleRowActions}>
+            </lightning-tree-grid>
+        </template>
+
+        <template if:true={fromPremise}>
+            <p class="slds-text-heading_small" style="padding-top: 20px;">Quote Lines</p><br/>
+            <div slot="footer" class="slds-m-around_medium slds-text-align_left">
+                <c-salesforce-codex-data-table-custom
+                    key-field="Id"
+                    data={quoteList}
+                    columns={quoteColumns}
+                    hide-checkbox-column>
+                </c-salesforce-codex-data-table-custom>
+            </div>
+            <!-- <lightning-card title="Quote Lines" style="padding-top: 20px;">
+                <div slot="footer" class="slds-m-around_medium slds-text-align_left">
+                    <c-salesforce-codex-data-table-custom
+                        key-field="Id"
+                        data={quoteList}
+                        columns={quoteColumns}
+                        hide-checkbox-column>
+                    </c-salesforce-codex-data-table-custom>
+                </div>
+            </lightning-card> -->
+            <br/>
+        </template>
+    </div>
+</template>

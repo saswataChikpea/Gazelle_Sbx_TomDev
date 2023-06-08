@@ -1,0 +1,59 @@
+<template>
+    <template if:true={planIds}>
+    <section role="dialog" tabindex="-1"
+        aria-labelledby="modal-heading-01"
+        aria-modal="true"
+        aria-describedby="modal-content-id-1"
+        class="slds-modal slds-fade-in-open" style="background: #0000006b;">
+            <div class="slds-modal__container">
+                <!-- modal header -->
+                <header class="slds-modal__header">
+                    <button class="slds-button slds-button_icon slds-modal__close slds-button_icon-inverse" title="Close" onclick={handleCloseModal}>
+                        <lightning-icon icon-name="utility:close" alternative-text="close" variant="inverse" size="small" ></lightning-icon>
+                    </button>
+                    <h2 id="modal-heading-01" class="slds-text-heading_medium slds-hyphenate">Related Product</h2>
+                    <p class="slds-m-top_x-small">
+                        Adding the related equipment(s) of <a href={selectedParentPlanId} target="_blank"><b>{selectedParentPlanName}</b></a>                        
+                    </p>
+                </header>
+                <!-- modal body -->
+                <!-- required equipments  -->
+                <div class="slds-modal__content slds-p-around_medium" id="modal-content-id-0">
+                    <lightning-card>
+                        <h3 slot="title">
+                            <!-- <c-chik-pea-sticks></c-chik-pea-sticks> -->
+                            Related Equipments(s)
+                        </h3>
+                        <div class="slds-m-around_medium">
+                            <template if:true={tobeAddedRecords}>
+                                <lightning-datatable
+                                    key-field="rqId"
+                                    data={tobeAddedRecords}
+                                    columns={columns}
+                                    onrowselection={handleSelected}
+                                    selected-rows={savedRows}
+                                    onsave={handleSave}
+                                    draft-values={draftValues}
+                                    oncellchange={handleCellChange}
+                                    show-row-number-column=false>
+                                </lightning-datatable>
+                            </template>
+                        </div>
+                    </lightning-card>
+                </div>
+                <!-- required equipments end -->
+                <!-- modal footer start-->
+                <footer class="slds-modal__footer">
+                    <div class="slds-m-right_medium" style="display: inline;">
+                        <lightning-button 
+                            label="Cancel" title="Cancel" onclick={handleCloseModal}></lightning-button>
+                    </div>
+                    <div class="slds-m-right_medium" style="display: inline;">
+                        <lightning-button variant="brand"
+                            label="Save" title="Save" onclick={handleSave}></lightning-button>
+                    </div>        
+                </footer>
+            </div>
+    </section>  
+    </template>
+</template>

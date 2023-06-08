@@ -1,0 +1,26 @@
+<template>
+    <lightning-card variant="Narrow" title="Data Collection Form Tems" icon-name="standard:folder" class="cardSpinner slds-scrollable_x">
+        <table>
+            <tr>
+                <th>Name</th>
+                <th>Location</th>
+                <th>Requirement</th>
+                <th>Term</th>
+                <th>Plan</th>
+                <th>Availability</th>
+                <th>Premise</th>
+            </tr>
+            <template for:each={wiredDcfLinesResult} for:item="dcfLine">
+                    <tr key={dcfLine.Id}>
+                        <td>{dcfLine.Name}</td>
+                        <td>{dcfLine.Location__c}</td>
+                        <td>{dcfLine.Requirement__c}</td>
+                        <td>{dcfLine.Term__c}</td>
+                        <td>{dcfLine.planName}</td>
+                        <td>{dcfLine.Availability__c}</td>
+                        <td>{dcfLine.premiseName}</td>
+                    </tr>
+            </template>
+        </table>
+    </lightning-card>
+</template>

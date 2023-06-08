@@ -9,6 +9,8 @@
                 <div class="slds-col slds-size_1-of-2">
 
                     <lightning-input-field field-name="Location__c"></lightning-input-field>
+                    <lightning-input-field field-name="Opportunity__c" value={recordId}></lightning-input-field>
+
 
                 </div>
                 <div class="slds-col slds-size_1-of-2">
@@ -16,32 +18,24 @@
                 </div>
             </div>
 
-
-
-
-            
             <div class="slds-var-m-top_medium">
                 <lightning-button variant="brand" type="submit" label="Save">
                 </lightning-button>
-                <lightning-button class="slds-m-right_small" type="cancel" label="Cancel" onclick={closeModal}>
+                <lightning-button class="slds-m-right_small" type="cancel" label="Cancel" onclick={closeDCFModal}>
                 </lightning-button>
             </div>
         </lightning-record-edit-form>
     </template>
-    <div class="dcf-details">
-
-
+    <div class="dcf-details slds-border_bottom">
         <template if:false={newDCFRecord}>
+            <div class="slds-text-heading_medium slds-text-align_center dcfView">Data Collection Form Details</div>
             <lightning-record-view-form object-api-name={newDCF} record-id={DCFId}>
                 <div class="slds-grid slds-gutters">
                     <div class="slds-col slds-size_1-of-2">
-                        <lightning-output-field field-name="Name"> </lightning-output-field>
-                        <lightning-output-field field-name="Location__c"> </lightning-output-field>
+                        <lightning-output-field field-name="Name" class="outputField"> </lightning-output-field>
                     </div>
                     <div class="slds-col slds-size_1-of-2">
                         <lightning-output-field field-name="Opportunity__c"></lightning-output-field>
-                        <lightning-output-field field-name="Requirement__c"></lightning-output-field>
-                        <lightning-output-field field-name="Time__c"></lightning-output-field>
                     </div>
                 </div>
             </lightning-record-view-form>
@@ -49,9 +43,32 @@
         
     </div>
 
-    <span class="details-heading"> Existing Data Collection Form Lines </span>
+    <template if:true={showNewDcfLine}>
+        <lightning-card title="Add new DCF Lines">
+            <lightning-record-edit-form object-api-name={newDCFline} onsuccess={handleSuccess}>
 
+                <div class="slds-grid slds-gutters">
+                    <div class="slds-col slds-size_1-of-2">
+                        <lightning-input-field field-name="DCF__c"  value = {DCFId}></lightning-input-field>
+                        <lightning-input-field field-name="Term__c" class="contactName"></lightning-input-field>
 
+                    </div>
+                    <div class="slds-col slds-size_1-of-2">
+                        <lightning-input-field field-name="Location__c" class="contactName"></lightning-input-field>
+                        <lightning-input-field field-name="Requirement__c" class="contactName"></lightning-input-field>
+                    </div>
+                </div>
+                <div class="slds-var-m-top_medium">
+                    <lightning-button variant="brand" type="submit" label="Save">
+                    </lightning-button>
+                    <lightning-button class="slds-m-right_small" type="cancel" label="Cancel" onclick={closeModal}>
+                    </lightning-button>
+                </div>
+            </lightning-record-edit-form>
+        </lightning-card>
+    </template>
+
+    <div class="slds-text-heading_medium slds-text-align_center dcfView">Existing Data Collection Form Lines </div>
     <table class="slds-table slds-table_cell-buffer slds-table_bordered">
         <thead>
             <tr class="slds-line-height_reset">
@@ -78,11 +95,6 @@
                         Term
                     </div>
                 </th>
-                <th class="" scope="col">
-                    <div class="slds-truncate slds-line-clamp" style="display: flex;" title="Availability">
-                        Availability
-                    </div>
-                </th>
             </tr>
         </thead>
         <tbody>
@@ -97,16 +109,17 @@
                     <td>{dcfLine.Location__c}</td>
                     <td>{dcfLine.Requirement__c}</td>
                     <td>{dcfLine.Term__c}</td>
-                    <td>{dcfLine.Availability__c}</td>
                 </tr>
             </template>
         </template>
             <!-- </tr> -->
             <tr>
                 <th>
-                    <lightning-icon icon-name="utility:new" variant="success" style="cursor:pointer;"
+                    <lightning-button variant="brand" label="Add" title="Download action" icon-name="utility:new" class="slds-m-left_x-small" onclick={addNewDcfLine}></lightning-button>
+
+                    <!-- <lightning-icon icon-name="utility:new" variant="success" style="cursor:pointer;"
                         alternative-text="Add" size="small" title="Add a New DCf Line" onclick={addNewDcfLine}>
-                    </lightning-icon>
+                    </lightning-icon> -->
                 </th>
             </tr>
         </tbody>
@@ -115,41 +128,7 @@
     <!-- </lightning-card> -->
 
     <!-- <div class="new-dcfLine">
-        <template if:true={showNewDcfLine}>
-            <c-add-new-dcf-line>
-            </c-add-new-dcf-line>
-        </template>
+       
     </div> -->
-    <template if:true={showNewDcfLine}>
-        <lightning-card title="Add new DCF Lines">
-            <lightning-record-edit-form object-api-name={newDCFline} onsuccess={handleSuccess}>
-
-                <div class="slds-grid slds-gutters">
-                    <div class="slds-col slds-size_1-of-2">
-
-                        <lightning-input-field field-name="DCF__c" class="contactName" value = {DCFId}></lightning-input-field>
-
-                        <lightning-input-field field-name="Name" class="contactName"></lightning-input-field>
-                        <lightning-input-field field-name="Availability__c" class="contactName"></lightning-input-field>
-                    </div>
-                    <div class="slds-col slds-size_1-of-2">
-                        <lightning-input-field field-name="Location__c" class="contactName"></lightning-input-field>
-                        <lightning-input-field field-name="Requirement__c" class="contactName"></lightning-input-field>
-                        <lightning-input-field field-name="Term__c" class="contactName"></lightning-input-field>
-                    </div>
-                </div>
-
-
-
-
-
-                <div class="slds-var-m-top_medium">
-                    <lightning-button variant="brand" type="submit" label="Save">
-                    </lightning-button>
-                    <lightning-button class="slds-m-right_small" type="cancel" label="Cancel" onclick={closeModal}>
-                    </lightning-button>
-                </div>
-            </lightning-record-edit-form>
-        </lightning-card>
-    </template>
+    
 </template>

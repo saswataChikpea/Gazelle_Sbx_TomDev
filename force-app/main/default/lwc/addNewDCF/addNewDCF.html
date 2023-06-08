@@ -1,0 +1,32 @@
+<template>
+    <lightning-card title="Add new DCF">
+        <lightning-record-edit-form
+            object-api-name={newDCFline}
+        >
+    <lightning-layout multiple-rows>
+        <lightning-layout-item size="12" padding="arround-small">
+            <lightning-input-field field-name="DCF__c"></lightning-input-field>
+        </lightning-layout-item>
+        <lightning-layout-item size="12" padding="arround-small">
+            <lightning-input-field field-name="Name"></lightning-input-field>
+        </lightning-layout-item>
+        <lightning-layout-item size="12" padding="arround-small">
+            <lightning-input-field field-name="Location__c"></lightning-input-field>
+        </lightning-layout-item>
+        <lightning-layout-item size="12" padding="arround-small">
+            <lightning-input-field field-name="Requirement__c"></lightning-input-field>
+        </lightning-layout-item>
+        <lightning-layout-item size="12" padding="arround-small">
+            <lightning-input-field field-name="Term__c"></lightning-input-field>
+        </lightning-layout-item>
+    </lightning-layout>
+
+    <div class="slds-var-m-top_medium">
+        <lightning-button variant="brand" type="submit" label="Save">
+        </lightning-button>
+        <lightning-button class="slds-m-right_small" type="cancel" label="Cancel">
+        </lightning-button>
+    </div>
+    </lightning-record-edit-form>
+    </lightning-card>
+</template>

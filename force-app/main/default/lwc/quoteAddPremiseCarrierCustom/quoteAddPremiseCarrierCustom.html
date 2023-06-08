@@ -1,0 +1,160 @@
+<template>
+    <template if:true={recordId}>
+        <c-quote-line-hierarchy-custom
+            record-id={recordId}
+            onolrowaction={quoteLineRowAction}
+            grid-columns={gridColumns}
+            quote-columns={quoteColumns}
+            from-premise=true
+            title='Add Premise &amp; Carrier for Quote - '>
+        </c-quote-line-hierarchy-custom>
+        <!-- add location carrier modal -->
+        <!-- add plan modal -->
+        <template if:true={bShowModal}>
+            <section role="dialog" tabindex="-1"
+            aria-labelledby="modal-heading-01"
+            aria-modal="true"
+            aria-describedby="modal-content-id-1"
+            class="slds-modal slds-fade-in-open" style="background: #0000006b;">
+                <div class="slds-modal__container">
+                    <!-- modal header -->
+                    <header class="slds-modal__header">
+                        <button class="slds-button slds-button_icon slds-modal__close slds-button_icon-inverse" title="Close" onclick={closeModal}>
+                            <lightning-icon icon-name="utility:close" alternative-text="close" variant="inverse" size="small" ></lightning-icon>
+                        </button>
+                        <h2 id="modal-heading-01" class="slds-text-heading_medium slds-hyphenate">Premise &amp; Carrier</h2>
+                        <p class="slds-m-top_x-small">
+                            Selecting Premise &amp; Carrier for <b>{selectedQuoteLine.Name}</b>                       
+                        </p>
+                    </header>
+                    <!-- modal body -->
+                    <!-- required plans  -->
+                    <div class="slds-modal__content slds-p-around_medium" id="modal-content-id-0">
+                        <lightning-card title="Choose Premise &amp; Carrier" icon-name="custom:custom14">
+                            <div class="slds-m-around_medium">
+                                <!-- <div class="slds-grid">
+                                    <div class="slds-col slds-p-horizontal_medium">
+                                        <div class="slds-m-around_small">
+                                            <c-lwc-custom-lookup-custom 
+                                                get-id-from-parent={recordId}    
+                                                object-name="ChikPeaTOM__Premise__c" 
+                                                object-label="Premise"
+                                                icon-name = "standard:address"
+                                                lookuplabel="Premise"
+                                                onselected={lookupSelected}
+                                                oncreatenew={createNewPremise}>
+                                            </c-lwc-custom-lookup-custom>
+                                        </div>
+                                        <div class="slds-m-around_small">
+                                            <lightning-input name="suite_no" label="Suite No" onchange={handleChange}>
+                                            </lightning-input>
+                                        </div> 
+                                    </div>    
+                                    <div class="slds-col slds-p-horizontal_medium">
+                                        <div class="slds-m-around_small">
+                                            <c-lwc-custom-lookup-custom object-name="ChikPeaTOM__Carrier__c" 
+                                            object-label="Carrier"
+                                            icon-name = "custom:custom98"
+                                            lookuplabel="Carrier"
+                                            onselected={carrierLookupSelected}
+                                            oncreatenew={createNewCarrier}>
+                                        </c-lwc-custom-lookup-custom>
+                                        </div>
+                                        <div class="slds-m-around_medium">                                         
+                                            <lightning-input name="isPrimary" checked type="checkbox" label="Primary" onchange={handleCheckBoxChange}>
+                                            </lightning-input>
+                                        </div>
+                                        <div class="slds-m-around_medium">  
+                                            <lightning-input name="isForAll" type="checkbox" label="Apply to All Lines" onchange={handleCheckBoxChange}>
+                                            </lightning-input>
+                                        </div>
+                                        <template if:true={bundleQL}>
+                                            <div class="slds-m-around_medium">
+                                                <lightning-input name="isForChild" type="checkbox" label="Apply to All Child Lines" onchange={handleCheckBoxChange}></lightning-input>
+                                            </div>
+                                        </template>
+                                        <template if:true={showSpinner}>
+                                            <div class="exampleHolder">
+                                                <lightning-spinner alternative-text="Loading" size="medium" variant="brand"></lightning-spinner>
+                                            </div>
+                                        </template>
+                                    </div>
+                                </div> -->
+                                <div class="slds-grid" style="justify-content: space-around;">
+                                    <div class="slds-m-around_small">
+                                            <c-lwc-custom-lookup-custom 
+                                                get-id-from-parent={recordId}    
+                                                object-name="ChikPeaTOM__Premise__c" 
+                                                object-label="Premise"
+                                                icon-name = "standard:address"
+                                                lookuplabel="Premise"
+                                                onselected={lookupSelected}
+                                                oncreatenew={createNewPremise}>
+                                            </c-lwc-custom-lookup-custom>
+                                        </div>
+
+                                        <div class="slds-m-around_small"  style="height: 4.5rem;width:15rem;">
+                                            <lightning-input name="suite_no" label="Suite No" onchange={handleChange}>
+                                            </lightning-input>
+                                        </div>
+
+                                        <div class="slds-m-around_small">
+                                         <c-lwc-custom-lookup-custom object-name="ChikPeaTOM__Carrier__c" 
+                                            object-label="Carrier"
+                                            icon-name = "custom:custom98"
+                                            lookuplabel="Carrier"
+                                            onselected={carrierLookupSelected}
+                                            oncreatenew={createNewCarrier}>
+                                        </c-lwc-custom-lookup-custom>
+                                        </div>
+                                        
+                            </div>
+                                            
+                                        <div class="slds-m-around_medium">                                         
+                                            <lightning-input name="isPrimary" checked type="checkbox" label="Primary" onchange={handleCheckBoxChange}>
+                                            </lightning-input>
+                                        </div>
+                                        <div class="slds-m-around_medium">  
+                                            <lightning-input name="isForAll" type="checkbox" label="Apply to All Lines" onchange={handleCheckBoxChange}>
+                                            </lightning-input>
+                                        </div>
+                                        <template if:true={bundleQL}>
+                                            <div class="slds-m-around_medium">
+                                                <lightning-input name="isForChild" type="checkbox" label="Apply to All Child Lines" onchange={handleCheckBoxChange}></lightning-input>
+                                            </div>
+                                        </template>
+                                        <template if:true={showSpinner}>
+                                            <div class="exampleHolder">
+                                                <lightning-spinner alternative-text="Loading" size="medium" variant="brand"></lightning-spinner>
+                                            </div>
+                                        </template>
+                                    </div>
+                        </lightning-card>
+                    </div>
+                    <!-- required plans end -->
+                    <!-- modal footer start-->
+                    <footer class="slds-modal__footer">
+                        <div class="slds-m-right_medium" style="display: inline;">
+                            <lightning-button 
+                                label="Cancel" title="Cancel" onclick={closeModal}></lightning-button>
+                        </div>
+                        <div class="slds-m-right_medium" style="display: inline;">
+                            <lightning-button variant="brand"
+                                label="Save" title="Save" onclick={handleSubmit}></lightning-button>
+                        </div>        
+                    </footer>
+                </div>
+            </section>        
+        </template>
+        <!--add location and carrier modal end-->
+
+        <!--create premise & carrier modal-->
+        <template if:true={bShowCreatePremise}>
+            <c-create-premise-custom onhandlepremiseclosemodal={closePremiseModal}></c-create-premise-custom>        
+        </template>
+        <template if:true={bShowCreateCarrier}>
+            <c-create-carrier-custom onhandlecarrierclosemodal={closeCarrierModal}></c-create-carrier-custom>        
+        </template>
+        <!--create premise & carrier modal end-->
+    </template>
+</template>

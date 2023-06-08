@@ -1,0 +1,1307 @@
+<apex:page standardStylesheets="true" renderAs="pdf" applyHtmlTag="false" showHeader="false">
+    <html>
+        <head>
+            <style>
+                
+               
+                
+                body{
+                	size: A4;
+                	margin: 0 auto;
+                	margin-top: 20px;
+                	margin-bottom: 60px;
+                	margin-left: 0px;
+                	margin-right: 0px;
+                	font-family: Arial;
+                	
+                }
+            </style>
+        </head>
+        <body style="font-family:sans-serif;">
+            <!-- Page 1 -->
+
+            <div style="text-align:center;">
+                <img src="https://gazelle--tomdev--c.sandbox.vf.force.com/resource/1681974558000/gazelleText?" />
+            </div>
+            <!-- <apex:image id="gazelleText" value ="{$Resource.gazelleText}"/> -->
+            <div style="font-family:sans-serif;
+                        text-align:right;
+                        ">
+                <h1 style="line-height: 1%;
+                           font:32pt;
+                           color:#c154c1;">INTELLIGENT OFFICE :</h1>
+                <h1 style="font:32pt;color:#c154c1;">EDMONTON</h1>
+            </div>
+            <div>
+                <h1 style="font-size:20px;
+                           text-align:right;
+                           font-family:sans-serif;">DATA NETWORK UPGRADE &amp; VOICE SOLUTION</h1>
+            </div>
+            <div><pre>                
+                
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            </pre></div>
+            <!-- Page 2 -->
+            <div>
+                <p style="font-family:sans-serif;
+                          font:15.9pt;
+                          color:#728FCE;">Table of Contents</p>
+            </div>
+
+
+            
+            <div style="line-height: 2%;font-family:sans-serif;font:11pt;">
+                <p >Objective Summary .......................................................................................................................................4</p>
+                <p>Overview ........................................................................................................................................................4 </p>
+                <p>Location(s) .....................................................................................................................................................4 </p>
+                <p>Milestones ......................................................................................................................................................4</p>
+                <p>Deployment Phases .......................................................................................................................................5</p>
+                <p style="padding-left:30px;">Phase 1.1 – Order Voice &amp; Data Hardware ............................................................................................5</p>
+                <p style="padding-left:30px;">Phase 1.2 – Complete Voice COP Document ........................................................................................5 </p>
+                <p style="padding-left:30px;">Phase 1.3 – Provision New Voice Subscribers .......................................................................................5 </p>
+                <p style="padding-left:30px;">Phase 1.4 – Configuration of Data Hardware ..........................................................................................5</p>
+                <p style="padding-left:30px;">Phase 2.1 – Delivery &amp; Setup of AIO Computers ....................................................................................5</p>
+                <p style="padding-left:30px;">Phase 2.2 – Configuration &amp; Deployment of AIO Computers ............................................................... 5</p>
+                <p style="padding-left:30px;">Phase 3.1 – Primary Installation of Network &amp; Phones ........................................................................ 6</p>
+                <p style="padding-left:30px;">Phase 3.2 – Testing &amp; Confirmation Of All Services Functioning .......................................................... 6</p>
+                <p style="padding-left:30px;">Phase 3.3 – Adjustment To Network Segments As Needed ................................................................. 6 </p>
+                <p style="padding-left:30px;">Phase 4.1 – Secondary Installation Of Network Switching ................................................................... 6</p>
+                <p style="padding-left:30px;">Phase 4.2 – Testing &amp; Confirmation Of All Services Functioning .......................................................... 6 </p>
+                <p style="padding-left:30px;">Phase 4.3 – Adjustment To Network Segments As Needed ................................................................. 6</p>
+                <p style="padding-left:30px;">Phase 5.1 – Final Confirmation of All Services Functioning .................................................................. 6 </p>
+                <p>Method of Procedure.................................................................................................................................... 7</p>
+                <p style="padding-left:15px;">Data Services ............................................................................................................................................. 7</p>
+                <p style="padding-left:15px;">Managed Services ..................................................................................................................................... 7</p>
+                <p style="padding-left:15px;">Voice Services ........................................................................................................................................... 7</p>
+                <p>Isolated Wi-Fi Networks ................................................................................................................................ 7</p>
+                <p style="padding-left:15px;">Corporate Network ................................................................................................................................... 8</p>
+                <p style="padding-left:15px;">Guest Network .......................................................................................................................................... 8</p>
+                <p>Client Responsibilities ................................................................................................................................... 8</p>
+                <p>Professional Services / Installation ............................................................................................................... 8</p>
+                <p style="padding-left:15px;">Proposed Dispatch Requirements ............................................................................................................ 9                 </p>
+                <p style="padding-left:15px;">Proposed Material Requirements ............................................................................................................. 9</p>
+                <p>Potential Obstacles ....................................................................................................................................... 9 </p>
+                <p style="padding-left:30px;">Existing Network Cabling ...................................................................................................................... 9</p>
+                <p style="padding-left:30px;">Hardware Availability ............................................................................................................................ 9</p>
+                <p style="padding-left:30px;">Access Points ......................................................................................................................................... 9</p>
+                <p>Managed Network &amp; Wi-Fi Services ........................................................................................................... 10 </p>
+                <p style="padding-left:15px;">Monitored Entities .................................................................................................................................. 10 </p>
+                <p style="padding-left:15px;">Alert Contacts ......................................................................................................................................... 10</p>
+                <p>Additional Information................................................................................................................................ 10</p>
+                <p>Change Requests ......................................................................................................................................... 10</p>
+                <p>Delays .......................................................................................................................................................... 10</p>
+                <p>Warranty and Disclaimers ........................................................................................................................... 11</p>
+                <p>Limitation of Liability .................................................................................................................................. 11</p>
+                <p>Signoff and Acceptance............................................................................................................................... 11</p>
+            </div>
+            <div>
+                <pre>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                     
+
+
+
+
+
+                </pre>
+            </div>
+            <!-- page 4 -->
+            <div>
+                <p style="font:15.9pt;
+                          font-family:sans-serif;
+                          color: #5b9bd5;
+                          line-height: 0.8%;">Objective Summary</p>
+            </div>
+            <div>
+                <p style="font-family:sans-serif;
+                          font:11pt;
+                          ">This document outlines the scope of work required by Gazelle Integrated Communications Inc. (referred 
+                    to as Gazelle going forward) to perform Professional Services for the implementation and deployment of 
+                    voice &amp; data services for Intelligent Office Edmonton (client). This Professional Service offering will 
+                    include the provisioning of all services, method of procedure in implementing the proposed solution as 
+                    outlined below.</p>
+            </div>
+            <div>
+                <!-- <p style="font-family:sans-serif;
+                          padding-left:15px;
+                          font:11pt;"><pre>- Procure required hardware</pre></p> -->
+                <pre style="font-family:sans-serif;
+                            padding-left:30px;
+                            font:11pt;
+                            line-height: 30%;"> -     Procure required hardware</pre>
+                <pre style="font-family:sans-serif;
+                            padding-left:30px;
+                            font:11pt;
+                            line-height: 30%;"> -     Provision required services</pre>
+                <pre style="font-family:sans-serif;
+                            padding-left:30px;
+                            font:11pt;
+                            line-height: 30%;"> -     Installation of hardware at client site</pre>
+                <pre style="font-family:sans-serif;
+                            padding-left:30px;
+                            font:11pt;
+                            line-height: 30%;"> -     Testing and finalization of the project.</pre>
+            </div>
+            <br/>
+            <div>
+                <p style="font:15.9pt;
+                          font-family:sans-serif;
+                          color: #5b9bd5;
+                          line-height: 0.8%;">Overview</p>
+            </div>
+            <div>
+                <p style="font-family:sans-serif;
+                          font:11pt;
+                          ">Gazelle will be deploying a joint Voice &amp; Data network solution to the Intelligent Office Edmonton site. 
+                          Though this deployment, Gazelle will provide HPBX VoI  P connectivity in conjunction with an overhauled 
+                          data network and hardware refresh throughout the facility as outlined below: </p>
+            </div>
+            <div>
+                <pre style="font-family:sans-serif;
+                            padding-left:30px;
+                            font:11pt;
+                            line-height: 30%;"> -     Replacement of network router / firewall with Fortinet 60F</pre>
+                <pre style="font-family:sans-serif;
+                            padding-left:30px;
+                            font:11pt;
+                            line-height: 30%;"> -     Replacement of all network switching with Ubiquiti USW Series switches</pre>
+                <pre style="font-family:sans-serif;
+                            padding-left:30px;
+                            font:11pt;
+                            line-height: 30%;"> -     Replacement of all network wireless access points with Ubiquiti UAP series access points</pre>
+                            <pre style="font-family:sans-serif;
+                            padding-left:30px;
+                            font:11pt;
+                            line-height: 30%;"> -     Replacement of existing PBX &amp; Phones with Gazelle HPBX Deployment</pre>
+                            <pre style="font-family:sans-serif;
+                            padding-left:30px;
+                            font:11pt;
+                            line-height: 30%;"> -     Replacement of existing aging UPS devices with remote managed CyberPower device</pre>            
+            </div>
+            <br/>
+            <div>
+                <p style="font-family:sans-serif;
+                          font:11pt;
+                          ">This deployment will be conducted in two stages to ensure a smooth transition between the existing
+                          system(s) and the proposed solutions provided by Gazelle. These stages will be defined within this
+                          document. </p>
+            </div>
+
+            <div>
+                <p style="font-family:sans-serif;
+                          font:11pt;
+                          ">Gazelle will provide professional services technicians to install the specified voice and data hardware
+                          outlined within this document. As a pre-requisite to these professional services installations, the client
+                          will ensure that all requirements outlined in this document are ready for the technician. </p>
+            </div>
+
+            <div>
+                <p style="font:15.9pt;
+                          font-family:sans-serif;
+                          color: #5b9bd5;
+                          line-height: 0.8%;">Location(s)</p>
+            </div>
+            <div>
+                <table style="border: 1px solid black;
+                              width: 100%;
+                              font:11pt;
+                              font-family:sans-serif;
+                              border-collapse: collapse;">
+                    <tr>
+                        <th style="font:11pt;font-family:sans-serif;border: 1px solid black;padding-left:10px;">Location</th>
+                        <th style="font:11pt;font-family:sans-serif;border: 1px solid black;padding-left:10px;">Details</th>
+                    </tr>
+                    <tr>
+                        <td style="font:11pt;font-family:sans-serif;border: 1px solid black;padding-left:10px;">
+                            10060 Jasper Ave, Tower 1, Suite 2020<br/>
+                            Edmonton, AB<br/> 
+                            T5J 3R8 
+                        </td>
+                        <td style="font:11pt;font-family:sans-serif;border: 1px solid black;padding-left:10px;">
+                            Primary Location
+                        </td>
+                    </tr>
+                </table>
+            </div>
+
+            <div>
+                <p style="font:15.9pt;
+                          font-family:sans-serif;
+                          color: #5b9bd5;
+                          line-height: 0.8%;">Milestones</p>
+            </div>
+            <div>
+                <table style="border: 1px solid black;
+                              width: 100%;
+                              border-collapse: collapse; ">
+                   <tr>
+                        <th style="font:11pt;font-family:sans-serif;border: 1px solid black;
+                                   padding-right:10px;
+                                   padding-left:10px;
+                                   width:10%;" align="center">Phase</th>
+                        <th style="font:11pt;font-family:sans-serif;border: 1px solid black;
+                                   padding-left:100px;
+                                   padding-right:100px;
+                                   width:60%;" align="center">Task</th>
+                        <th style="font:11pt;font-family:sans-serif;border: 1px solid black;
+                                   width:30%;" align="center">Owner</th>
+                	</tr>
+                    
+                    <tr>
+                        <td align="center" style="font:11pt;font-family:sans-serif;border: 1px solid black;">1.1</td>
+                        <td style="font:11pt;font-family:sans-serif;border: 1px solid black;
+                                   padding-left:10px;">Order voice &amp; data hardware</td>
+                        <td style="font:11pt;font-family:sans-serif;border: 1px solid black;
+                                   padding-left:10px;">Gazelle Solutions Engineering</td>
+                    </tr>
+                    <tr>
+                        <td align="center" style="font:11pt;font-family:sans-serif;border: 1px solid black;">1.2</td>
+                        <td style="font:11pt;font-family:sans-serif;border: 1px solid black;
+                                   padding-left:10px;">Complete Voice COP Document</td>
+                        <td style="font:11pt;font-family:sans-serif;border: 1px solid black;
+                                   padding-left:10px;">Client / Gazelle SE</td>
+                    </tr>
+                    <tr>
+                        <td align="center" style="font:11pt;font-family:sans-serif;border: 1px solid black;">1.3</td>
+                        <td style="font:11pt;font-family:sans-serif;border: 1px solid black;
+                                   padding-left:10px;">Provision new voice subscribers &amp; system</td>
+                        <td style="font:11pt;font-family:sans-serif;border: 1px solid black;
+                                   padding-left:10px;">Gazelle Voice Provisioning</td>
+                    </tr>
+                    <tr>
+                        <td align="center" style="font:11pt;font-family:sans-serif;border: 1px solid black;">1.4</td>
+                        <td style="font:11pt;font-family:sans-serif;border: 1px solid black;
+                                   padding-left:10px;">Configuration of Data hardware</td>
+                        <td style="font:11pt;font-family:sans-serif;border: 1px solid black;
+                                   padding-left:10px;">Gazelle Data Engineering</td>
+                    </tr>
+                    <tr>
+                        <td align="center" style="font:11pt;font-family:sans-serif;border: 1px solid black;">2.1</td>
+                        <td style="font:11pt;font-family:sans-serif;border: 1px solid black;
+                                   padding-left:10px;">Delivery &amp; Setup of AIO Computers</td>
+                        <td style="font:11pt;font-family:sans-serif;border: 1px solid black;
+                                   padding-left:10px;">Gazelle Managed services</td>
+                    </tr>
+                    <tr>
+                        <td align="center" style="font:11pt;font-family:sans-serif;border: 1px solid black;">2.2</td>
+                        <td style="font:11pt;font-family:sans-serif;border: 1px solid black;
+                                   padding-left:10px;">Configuration &amp; Deployment of AIO Computers</td>
+                        <td style="font:11pt;font-family:sans-serif;border: 1px solid black;
+                                   padding-left:10px;">Gazelle Managed services</td>
+                    </tr>
+                    <tr>
+                        <td align="center" style="font:11pt;font-family:sans-serif;border: 1px solid black;">3.1</td>
+                        <td style="font:11pt;font-family:sans-serif;border: 1px solid black;
+                                   padding-left:10px;">Primary Installation Of Network &amp; Phones</td>
+                        <td style="font:11pt;font-family:sans-serif;border: 1px solid black;
+                                   padding-left:10px;">Gazelle Professional Services</td>
+                    </tr>
+                    <tr>
+                        <td align="center" style="font:11pt;font-family:sans-serif;border: 1px solid black;">3.2</td>
+                        <td style="font:11pt;font-family:sans-serif;border: 1px solid black;
+                                   padding-left:10px;">Testing &amp; Confirmation of Services Functioning</td>
+                        <td style="font:11pt;font-family:sans-serif;border: 1px solid black;
+                                   padding-left:10px;">Client</td>
+                    </tr>
+                    <tr>
+                        <td align="center" style="font:11pt;font-family:sans-serif;border: 1px solid black;">3.3</td>
+                        <td style="font:11pt;font-family:sans-serif;border: 1px solid black;
+                                   padding-left:10px;">Adjustments To Network Segments As Needed</td>
+                        <td style="font:11pt;font-family:sans-serif;border: 1px solid black;
+                                   padding-left:10px;">Gazelle Data Engineering</td>
+                    </tr>
+                    <tr>
+                        <td align="center" style="font:11pt;font-family:sans-serif;border: 1px solid black;">4.1</td>
+                        <td style="font:11pt;font-family:sans-serif;border: 1px solid black;
+                                   padding-left:10px;">Secondary Installation Of Network Switching</td>
+                        <td style="font:11pt;font-family:sans-serif;border: 1px solid black;
+                                   padding-left:10px;">Gazelle Professional Services</td>
+                    </tr>
+                    <tr>
+                        <td align="center" style="font:11pt;font-family:sans-serif;border: 1px solid black;">4.2</td>
+                        <td style="font:11pt;font-family:sans-serif;border: 1px solid black;
+                                   padding-left:10px;">Testing &amp; Confirmation of Services Functioning</td>
+                        <td style="font:11pt;font-family:sans-serif;border: 1px solid black;
+                                   padding-left:10px;">Client</td>
+                    </tr>
+                    <tr>
+                        <td align="center" style="font:11pt;font-family:sans-serif;border: 1px solid black;">4.3</td>
+                        <td style="font:11pt;font-family:sans-serif;border: 1px solid black;
+                                   padding-left:10px;">Adjustments To Network Segments As Needed</td>
+                        <td style="font:11pt;font-family:sans-serif;border: 1px solid black;
+                                   padding-left:10px;">Gazelle Data Engineering</td>
+                    </tr>
+                    <tr>
+                        <td align="center" style="font:11pt;font-family:sans-serif;border: 1px solid black;">5.1</td>
+                        <td style="font:11pt;font-family:sans-serif;border: 1px solid black;
+                                   padding-left:10px;">Final Confirmation Of All Services Functioning</td>
+                        <td style="font:11pt;font-family:sans-serif;border: 1px solid black;
+                                   padding-left:10px;">Client</td>
+                    </tr>
+                </table>
+            </div>
+            <!-- page 5 -->
+            <br/>
+            <div>
+                <p style="font:15.9pt;
+                          font-family:sans-serif;
+                          color: #5b9bd5;
+                          line-height: 0.8%;">Deployment Phases</p>
+            </div>
+            <div>
+                <p style="font-family:sans-serif;
+                          font:11pt;
+                          "><span style="font-family:sans-serif;
+                                         font:11pt;
+                                         color: #5b9bd5;">Phase 1.1 – Order Voice &amp; Data Hardware<br/></span>Gazelle will engage with the required vendors to order all voice &amp; data hardware. All items will be 
+                                         delivered to Gazelle offices for configuration or direct to client site as required. Procurement times will 
+                                         vary depending on vendor and hardware availability.</p>
+                
+                <p style="font-family:sans-serif;
+                          font:11pt;"><span style="font-family:sans-serif;
+                                                        font:11pt;
+                                                        color: #5b9bd5;">Phase 1.2 – Complete Voice COP Document<br/></span>Gazelle Solutions Engineering will work with the client to complete the COP (Clean Order Package) 
+                                                        document for voice deployments. This document will allow the collection of all required data to 
+                                                        complete a new voice order such as user’s names, extensions, number porting, call flow, and IVR setups.</p>
+                
+                <p style="font-family:sans-serif;
+                          font:11pt;"><span style="font-family:sans-serif;
+                                                   font:11pt;
+                                                   color: #5b9bd5;">Phase 1.3 – Provision New Voice Subscribers<br/></span>Gazelle Voice Provisioning will setup &amp; configure all user accounts in accordance with the COP 
+                                                   document completed in phase 1.2. Testing of call flows will be completed, and a temporary main 
+                                                   inbound number will be put in place until porting of the main number(s) is completed.</p>
+            
+                <p style="font-family:sans-serif;
+                                                   font:11pt;
+                                                   "><span style="font-family:sans-serif;
+                                                                  font:11pt;
+                                                                  color: #5b9bd5;">Phase 1.4 – Configuration of Data Hardware<br/></span>Gazelle’s Data Engineering department will complete the configuration of all network hardware devices. 
+                                                                  In Phase 1 of the project, the network will be configured to mirror that of the existing network with 
+                                                                  provisions for future changes. Switching will be initially configured in a single network format, with 
+                                                                  provisions to change into segregated VLANs in the future if required. Wi-Fi access points will be 
+                                                                  configured with the same SSID (broadcast names) and passwords previously used.</p>
+                                                                  
+                                                                  
+                <p style="font-family:sans-serif;
+                                                                  font:11pt;
+                                                                  "><span style="font-family:sans-serif;
+                                                                                 font:11pt;
+                                                                                 color: #5b9bd5;">Phase 2.1 – Delivery &amp; Setup of Computers<br/></span>Gazelle has specifically selected these computers for the needs of the IA workstations. The device will be 
+                                                                                 shipped and delivered directly to the client site. Upon delivery, the client is asked to contact Gazelle 
+                                                                                 Managed Services to assist with the unboxing and general physical setup of the device.</p>
+                                                                                
+                <p style="font-family:sans-serif;
+                                                                                 font:11pt;
+                                                                                 "><span style="font-family:sans-serif;
+                                                                                                font:11pt;
+                                                                                                color: #5b9bd5;">Phase 2.2 – Configuration &amp; Deployment of Computers<br/></span>Gazelle Managed Services will help guide on-site staff to primarily power on and temporarily connect 
+                                                                                                the devices into the existing client network. The Managed Services team will then conduct a thorough 
+                                                                                                review of the devices to ensure that all systems are completely operational with the required 
+                                                                                                applications, permissions, and tools required for the IA position.
+                </p> 
+                
+                <p style="font-family:sans-serif;
+                          font:11pt;
+                          "><span style="font-family:sans-serif;
+                                         font:11pt;
+                                         color: #5b9bd5;">Phase 3.1 – Primary Installation of Network &amp; Phones<br/></span>Gazelle will complete a site dispatch to install the firewall, LTE modem, Wifi access points &amp; reconfigure 
+                                         the existing phones to function on Gazelle’s HPBX system. The existing network appliances with the 
+                                         exception of the switching infrastructure will be removed from the rack and decommissioned. 
+                                         Additional cabling will be required for the WiFi access points. During this dispatch, a service interruption 
+                                         is expected to last for the duration of the dispatch.
+                </p>
+
+                <p style="font-family:sans-serif;
+                          font:11pt;
+                          "><span style="font-family:sans-serif;
+                                         font:11pt;
+                                         color: #5b9bd5;">Phase 3.2 – Testing &amp; Confirmation Of All Services Functioning<br/></span>As the primary dispatch comes to completion, Gazelle will rely on the client to advise that all services are 
+                                         functioning as intended. At this time adjustments can be made by Gazelle to correct any potential 
+                                         problems. This will be achieved through active communication between various Gazelle support staff &amp; 
+                                         the client throughout all steps.
+                </p>
+
+                <p style="font-family:sans-serif;
+                          font:11pt;
+                          "><span style="font-family:sans-serif;
+                                         font:11pt;
+                                         color: #5b9bd5;">Phase 3.3 – Adjustment To Network Segments As Needed<br/></span>Should any problems be identified in Phase 3.2 Gazelle Data Engineering will work alongside the client to 
+                                         make any required adjustments to the network. This will include any identified requirements for VPN 
+                                         services, port forwarding, or access control. 
+                                         
+                </p>
+
+                <p style="font-family:sans-serif;
+                          font:11pt;
+                          "><span style="font-family:sans-serif;
+                                         font:11pt;
+                                         color: #5b9bd5;">Phase 4.1 – Secondary Installation Of Network Switching<br/></span>Gazelle will complete a site dispatch to replace all Wi-Fi access points throughout the facility. Due to the 
+                                         nature of this step, all reasonable attempts will be made to locate and replace each device. Due to the 
+                                         unknown locations of all devices, it is possible that some devices may be unable to be located and 
+                                         subsequent visits may be required. Further information about this can be found in the “Potential 
+                                         Obstacles” section of this document. 
+                                         
+                </p>
+
+                <p style="font-family:sans-serif;
+                          font:11pt;
+                          "><span style="font-family:sans-serif;
+                                         font:11pt;
+                                         color: #5b9bd5;">Phase 4.2 – Testing &amp; Confirmation Of All Services Functioning<br/></span>As the secondary dispatch comes to completion, Gazelle will rely on the client to advise that all services 
+                                         are functioning as intended. At this time adjustments can be made by Gazelle to correct any potential 
+                                         problems. This will be achieved through active communication between various Gazelle support staff &amp; 
+                                         the client throughout all steps. 
+                                         
+                </p>
+
+                <p style="font-family:sans-serif;
+                          font:11pt;
+                          "><span style="font-family:sans-serif;
+                                         font:11pt;
+                                         color: #5b9bd5;">Phase 4.3 – Adjustment To Network Segments As Needed<br/></span>Should any problems be identified in Phase 4.2 Gazelle Data Engineering will work alongside the client to 
+                                         make any required adjustments to the network. This will include any identified requirements for VLAN 
+                                         changes. 
+                                         
+                </p>
+
+                <p style="font-family:sans-serif;
+                          font:11pt;
+                          "><span style="font-family:sans-serif;
+                                         font:11pt;
+                                         color: #5b9bd5;">Phase 5.1 – Final Confirmation of All Services Functioning<br/></span>As all phases of project comes to completion, Gazelle will continue communication with the client to 
+                                         confirm all services remain functioning as intended. A final sign-off by the client will be completed and 
+                                         general operation of the site will commence.                                           
+                                         
+                </p>
+
+                
+            </div>
+            <br/>
+             <!-- page 6 -->
+             <div>
+                <p style="font:15.9pt;
+                            font-family:sans-serif;
+                            color: #5b9bd5;
+                            line-height: 0.8%;">Method of Procedure</p>
+             </div>
+
+             <div>
+                <p style="font-family:sans-serif;
+                          font:11pt;
+                          "><span style="font-family:sans-serif;
+                                         font:11pt;
+                                         color: #5b9bd5;">Data Services<br/></span>The client is currently utilizing a Sonicwall Firewall/Router. Gazelle will replace this device with a 
+                                         FortiGate 60F Firewall/Router. Current switching in place is two (2) Netgear 48 Port PoE Managed 
+                                         Switches. Both switching devices will be replaced by Ubiquiti USW-48-PoE-Gen2-Pro devices. Access 
+                                         points within the facility will be replaced with current link Ubiquiti UAP-AC-Pro devices. In addition, 
+                                         Gazelle will also deploy a managed LTE backup connectivity service for WAN redundancy.                                           
+                                         
+                </p>
+
+                <p style="font-family:sans-serif;
+                          font:11pt;
+                          "><span style="font-family:sans-serif;
+                                         font:11pt;
+                                         color: #5b9bd5;">Managed Services<br/></span>The client is currently utilizing two unknown devices at the current IA workstations. Gazelle’s Managed 
+                                         Services team will deploy new AIO (All In One) solutions as part of the service offerings. This will include 
+                                         the installation and configuration of the new devices for use. In addition, the transfer of existing files will 
+                                         occur to help provide a more seamless transition for users.                                           
+                                         
+                </p>
+
+                <p style="font-family:sans-serif;
+                          font:11pt;
+                          "><span style="font-family:sans-serif;
+                                         font:11pt;
+                                         color: #5b9bd5;">Voice Services<br/></span>Gazelle will complete a full conversion of the existing voice system to Gazelle’s HPBX (Hosted PBX). This 
+                                         conversion will include the porting of the selected phone numbers (DIDs and TFNs) in accordance with 
+                                         the COP document. Any additional numbers not ported will ultimately be released back into circulation. 
+                                         All existing phones will be reconfigured to communicate with Gazelle’s HPBX system. Gazelle will also 
+                                         integrate the Intelligent Assistant team into our Hosted Suite solution for the use by the Intelligent 
+                                         Assistant team. Upon initial installation, the IA users will utilize a Gazelle softphone as an application on 
+                                         their computer as the primary source of call taking. The client will supply their own existing USB 
+                                         headsets for communications. In future, Gazelle will supply SNOM voice hardware as a physical device 
+                                         for the IA users and will be considered a subsidiary project not covered by this SOW.                                           
+                                         
+                </p>
+             </div>
+             <br/>
+             <div>
+                <p style="font:15.9pt;
+                            font-family:sans-serif;
+                            color: #5b9bd5;
+                            line-height: 0.8%;">Isolated Wi-Fi Networks</p>
+            </div>
+
+            <div>
+                <p style="font-family:sans-serif;
+                          font:11pt;
+                          ">As part of this project, Gazelle will deploy multiple Wi-Fi network(s). This solution will allow for internet 
+                          access for both guest traffic and corporate use. Bandwidth steering will be implemented to force host 
+                          devices to connect to the 5GHz network be default if the host can connect on this frequency. Hosts 
+                          unable to connect to the 5GHz network will default to the 2.4GHz network as required. Fast roaming will 
+                          be enabled to allow hosts to seamlessly move between access points, always connecting to the 
+                          strongest signal of the two.
+                </p>
+
+                <p style="font-family:sans-serif;
+                          font:11pt;
+                          ">Gazelle will be responsible for the configuration and deployment of these Wi-Fi network(s), including 
+                          ongoing maintenance including any required changes to the network SSIDs, encryption types or security 
+                          passwords. Gazelle is unable to provide end user support for client devices and their connectivity to the 
+                          Wi-Fi network.
+                </p>
+                <p style="font-family:sans-serif;
+                          font:11pt;
+                          ">Gazelle does not provide guarantees regarding Wi-Fi coverage or availability due to variable constraints 
+                          associated with Wi-Fi networks, however all reasonable attempts will be made to ensure proper 
+                          coverage throughout the facility. Should areas of poor coverage be identified, Gazelle will attempt to 
+                          remedy the situation through adjusting the location of Wi-Fi access points, however the purchase of 
+                          additional access points by the client may be required.                           
+                </p>
+
+                <p style="font-family:sans-serif;
+                          font:11pt;
+                          "><span style="font-family:sans-serif;
+                                         font:11pt;
+                                         color: #5b9bd5;">Corporate Network<br/></span>The corporate Wi-Fi network will provide staff and authorized devices access to the corporate LAN 
+                                         network and will be secured using WPA2 security. A passphrase provided to Gazelle will be used as 
+                                         specified by Intelligent Office. Should a password not be provided, Gazelle will generate a secure 
+                                         password for this network.                                           
+                                         
+                </p>
+
+                <p style="font-family:sans-serif;
+                          font:11pt;
+                          "><span style="font-family:sans-serif;
+                                         font:11pt;
+                                         color: #5b9bd5;">Guest Network<br/></span>The guest Wi-Fi network will allow guests to connect using a secured password and encrypted with 
+                                         WPA2 security. A passphrase provided to Gazelle will be used as specified by Intelligent Office. Should a 
+                                         password not be provided, Gazelle will generate a secure password for this network. This password will 
+                                         be provided to guests by staff of the facility as required. The selected password will assist in, but not 
+                                         ensure that unwanted or unauthorized users are able to access the network as this will be a shared 
+                                         password. Hosts within the guest network will have the ability to access the Internet but will be 
+                                         restricted from interacting with any hosts within the Corporate LAN network. In addition, the guest 
+                                         network will institute bandwidth restrictions as to ensure guest devices are not able to monopolize the 
+                                         WAN (Internet) link.                                           
+                                         
+                </p>
+            </div>
+
+            <div>
+                <p style="font:15.9pt;
+                            font-family:sans-serif;
+                            color: #5b9bd5;
+                            line-height: 0.8%;">Client Responsibilities</p>
+                
+                
+            </div>
+            
+            <div>
+                <p style="font-family:sans-serif;
+                          font:11pt;
+                          ">To ensure the success of the project, Gazelle relies on a co-operative relationship with the client. This
+                            relationship may require the client to complete certain responsibilities. Failure by the client to complete
+                            the outlined responsibilities may result in project delays and/or the inability for Gazelle or it’s
+                            contractors to adequately complete their responsibilities within the scope of the project. Any/all delays
+                            incurred because of client responsibilities not being met may result in additional time, dispatches, and
+                            costs incurred by the client. The current client responsibilities are identified but not limited to the
+                            following:
+                </p>
+            </div>
+            
+            <div>
+                <pre style="font-family:sans-serif;
+                            padding-left:30px;
+                            font:11pt;
+                            line-height: 30%;">1. Complete the COP document with assistance from Gazelle Solutions Engineering</pre>
+                
+                <pre style="font-family:sans-serif;
+                            padding-left:30px;
+                            font:11pt;
+                            line-height: 30%;">2. Provide Gazelle complete access to the current firewall infrastructure for discovery &amp;</pre>
+                <pre style="font-family:sans-serif;
+                            padding-left:45px;
+                            font:11pt;
+                            line-height: 30%;">investigation</pre>
+                
+                
+                <pre style="font-family:sans-serif;
+                            padding-left:30px;
+                            font:11pt;
+                            line-height: 30%;">3. Provide Gazelle access to the current switching infrastructure for discovery &amp; investigation</pre>
+                
+                <pre style="font-family:sans-serif;
+                            padding-left:30px;
+                            font:11pt;
+                            line-height: 30%;">4. Provide Gazelle any administrative password required for the existing phone hardware to allow</pre>
+                <pre style="font-family:sans-serif;
+                            padding-left:45px;
+                            font:11pt;
+                            line-height: 30%;">for reconfiguration </pre>
+                
+                <pre style="font-family:sans-serif;
+                            padding-left:30px;
+                            font:11pt;
+                            line-height: 30%;">5. Provide Gazelle and its contractors access to all areas of the facility required to complete the</pre>
+                
+                <pre style="font-family:sans-serif;
+                            padding-left:45px;
+                            font:11pt;
+                            line-height: 30%;">project</pre>
+                
+                <pre style="font-family:sans-serif;
+                            padding-left:30px;
+                            font:11pt;
+                            line-height: 30%;">6. Provide Gazelle authorization on the existing Wolfpaw fiber connectivity account.
+                </pre>
+                <pre style="font-family:sans-serif;
+                            padding-left:30px;
+                            font:11pt;
+                            line-height: 30%;">7. Provide Gazelle Managed Services all login/password information as required for existing 
+                </pre>
+                <pre style="font-family:sans-serif;
+                            padding-left:45px;
+                            font:11pt;
+                            line-height: 30%;">computer(s).
+                </pre>
+
+                <pre style="font-family:sans-serif;
+                            padding-left:30px;
+                            font:11pt;
+                            line-height: 30%;">8. Assist Gazelle Managed Services with on site “hands” for the general physical setup of computer 
+                </pre>
+                <pre style="font-family:sans-serif;
+                            padding-left:45px;
+                            font:11pt;
+                            line-height: 30%;">devices and initial connectivity to the existing network. (s).
+                </pre>
+            </div>
+            <br/>
+            <div>
+                <p style="font:15.9pt;
+                            font-family:sans-serif;
+                            color: #5b9bd5;
+                            line-height: 0.8%;">Professional Services / Installation
+                </p>
+
+                <p style="font-family:sans-serif;
+                          font:11pt;
+                          ">Gazelle’s professional services &amp; installation will be carried out by Gazelle and/or 3rd party contractors at 
+                          the sole discretion of Gazelle. Gazelle will provide the client no less than three (3) business days notice of a professional services dispatch unless otherwise agreed upon by both parties. The client agrees to 
+                          provide adequate access to all contractors at site allowing them ability to complete the required tasks. 
+                          Failure to provide access may result in additional delays, and/or subsequent dispatches. All professional 
+                          services &amp; installation dispatches are billed according to the actual time spent (including travel). 
+                          Materials required will be billed according to those required to fully complete the installation task(s). 
+                          Costs are provided as an estimate, however actual time, labour, and material costs may differ from the 
+                          proposed estimate. The client agrees to all professional services &amp; installation costs as billed on the final 
+                          invoice.
+                </p>
+            </div>
+            <!-- page 9 -->
+            <div>
+                <p style="font-family:sans-serif;
+                          font:11pt;
+                          "><span style="font-family:sans-serif;
+                                         font:11pt;
+                                         color: #5b9bd5;">Proposed Dispatch Requirements<br/></span>
+                                        <table style="border: 1px solid black;
+                                                      width: 100%;
+                                                      border-collapse: collapse; ">
+                                           <tr>
+                                                <th style="font:11pt;font-family:sans-serif;border: 1px solid black;
+                                                padding-right:10px;
+                                                padding-left:10px;
+                                                width:15%;" align="center">Date</th>
+                                                <th style="font:11pt;font-family:sans-serif;border: 1px solid black;
+                                                
+                                                width:15%;" align="center">Est Hrs</th>
+                                                <th style="font:11pt;font-family:sans-serif;border: 1px solid black;
+                                                width:70%;" align="center">Proposed Task</th>
+                                           </tr>
+                                            
+                                            <tr>
+                                                <td style="font:11pt;font-family:sans-serif;border: 1px solid black;
+                                                padding-right:10px;
+                                                padding-left:10px;
+                                                width:15%;" align="center">TBD</td>
+                                                <td style="font:11pt;font-family:sans-serif;border: 1px solid black;
+                                                
+                                                width:15%;" align="center">6</td>
+                                                <td style="font:11pt;font-family:sans-serif;border: 1px solid black;
+                                                width:70%;" align="center">Installation of Firewall, LTE Modem, &amp; 3 WiFi Access Points including any
+required cabling for access points. Reconfiguration of all existing phones.</td>
+                                           </tr>
+                                            
+                                            <tr>
+                                                <td style="font:11pt;font-family:sans-serif;border: 1px solid black;
+                                                padding-right:10px;
+                                                padding-left:10px;
+                                                width:15%;" align="center">TBD</td>
+                                                <td style="font:11pt;font-family:sans-serif;border: 1px solid black;
+                                                
+                                                width:15%;" align="center">4</td>
+                                                <td style="font:11pt;font-family:sans-serif;border: 1px solid black;
+                                                width:70%;" align="left">Installation of Switching Infrastructure &amp; labelling of ports</td>
+                                           </tr>
+                                        </table>                                           
+                                         
+                </p>
+            </div>
+            <br/>
+            <div>
+                <p style="font-family:sans-serif;
+                          font:11pt;
+                          "><span style="font-family:sans-serif;
+                                         font:11pt;
+                                         color: #5b9bd5;">Proposed Material Requirements<br/></span>
+                <table style="border: 1px solid black;
+                width: 100%;
+                border-collapse: collapse; ">
+                    <tr>
+                        <th style="font:11pt;font-family:sans-serif;border: 1px solid black;
+                        padding-right:10px;
+                        padding-left:10px;
+                        width:10%;" align="center">
+                            Qty
+                        </th>
+                        <th style="font:11pt;font-family:sans-serif;border: 1px solid black;
+                        padding-right:10px;
+                        padding-left:10px;
+                        width:40%;" align="center">Item</th>
+                        <th style="font:11pt;font-family:sans-serif;border: 1px solid black;
+                        padding-right:10px;
+                        padding-left:10px;
+                        width:10%;" align="center">Cost</th>
+                        <th style="font:11pt;font-family:sans-serif;border: 1px solid black;
+                        padding-right:10px;
+                        padding-left:10px;
+                        width:40%;" align="center">Description</th>
+                    </tr>
+
+
+                    <tr>
+                        <td style="font:11pt;font-family:sans-serif;border: 1px solid black;
+                        padding-right:10px;
+                        padding-left:10px;
+                        width:10%;" align="center">
+                            1
+                        </td>
+                        <td style="font:11pt;font-family:sans-serif;border: 1px solid black;
+                        padding-right:10px;
+                        padding-left:10px;
+                        width:40%;" align="left">Cable Ties/Accessories</td>
+                        <td style="font:11pt;font-family:sans-serif;border: 1px solid black;
+                        padding-right:10px;
+                        padding-left:10px;
+                        width:10%;" align="left">$100.00 </td>
+                        <td style="font:11pt;font-family:sans-serif;border: 1px solid black;
+                        padding-right:10px;
+                        padding-left:10px;
+                        width:40%;" align="left">n/a</td>
+                    </tr>
+
+
+                    <tr>
+                        <td style="font:11pt;font-family:sans-serif;border: 1px solid black;
+                        padding-right:10px;
+                        padding-left:10px;
+                        width:10%;" align="center">
+                            3
+                        </td>
+                        <td style="font:11pt;font-family:sans-serif;border: 1px solid black;
+                        padding-right:10px;
+                        padding-left:10px;
+                        width:40%;" align="left">Cable Drops (Access Points)</td>
+                        <td style="font:11pt;font-family:sans-serif;border: 1px solid black;
+                        padding-right:10px;
+                        padding-left:10px;
+                        width:10%;" align="left">$150.00 </td>
+                        <td style="font:11pt;font-family:sans-serif;border: 1px solid black;
+                        padding-right:10px;
+                        padding-left:10px;
+                        width:40%;" align="left">New cable runs for APs</td>
+                    </tr>
+                </table>
+                </p>
+            </div>
+            <br/>
+            <div>
+                <p style="font:15.9pt;
+                            font-family:sans-serif;
+                            color: #5b9bd5;
+                            line-height: 0.8%;">Potential Obstacles</p>
+            </div>
+            
+            <div>
+                <p style="font-family:sans-serif;
+                          font:11pt;
+                          "><span style="font-family:sans-serif;
+                                         font:11pt;
+                                         color: #5b9bd5;">Existing Network Cabling<br/></span>Due to unknown nature of the existing cabling within the facility, Gazelle will attempt to make use of all 
+                                         existing cable infrastructure. Repairs and/or replacement of some cabling infrastructure may be 
+                                         required as it’s identified during the installation process. These costs will be discussed and relayed to the 
+                                         client prior to additional work being performed.                                           
+                                         
+                </p>
+
+                <p style="font-family:sans-serif;
+                          font:11pt;
+                          "><span style="font-family:sans-serif;
+                                         font:11pt;
+                                         color: #5b9bd5;">Hardware Availability<br/></span>Due to global shortages in silicon microchips and the ongoing COVID-19 pandemic, hardware availability 
+                                         changes rapidly and without warning, outside of Gazelle’s control. Every attempt will be made to secure 
+                                         all quoted and specified hardware; however, situations may arise where a backorder situation occurs. In 
+                                         such cases, Gazelle will discuss alternative hardware options with the client – however this may cause a 
+                                         fluctuation in price and/or deployment times. All hardware is ordered within 2 business days of a signed 
+                                         quote, and Gazelle is currently able to maintain a turnaround time for configuration &amp; deployment of 3 
+                                         business days from hardware arrival at our offices.                                           
+                                         
+                </p>
+
+                <p style="font-family:sans-serif;
+                          font:11pt;
+                          "><span style="font-family:sans-serif;
+                                         font:11pt;
+                                         color: #5b9bd5;">Access Points<br/></span>Based on the provided floorplans, Gazelle is recommending the use of 3 access points within the facility. 
+                                         This will require the change of location of the suspected current access points. Gazelle professional 
+                                         services will extend new cable runs to the most optimal areas to provide WiFi coverage to the best of 
+                                         our abilities within the facility.                                           
+                                         
+                </p>
+            </div>
+            <br/>
+            <!-- page 10 -->
+            <div>
+                <p style="font:15.9pt;
+                            font-family:sans-serif;
+                            color: #5b9bd5;
+                            line-height: 0.8%;">Managed Network &amp; Wi-Fi Services
+                </p>
+
+
+                <p style="font-family:sans-serif;
+                          font:11pt;
+                          ">Gazelle will provide managed network &amp; Wi-Fi services as part of the service offering. This includes but 
+                          is not limited to firmware upgrades on the managed hardware on a quarterly basis, configuration 
+                          changes as requested, and overall device monitoring to capture device statistics, potential errors, and 
+                          alarms.
+                </p>
+
+                <p style="font-family:sans-serif;
+                          font:11pt;
+                          "><span style="font-family:sans-serif;
+                                         font:11pt;
+                                         color: #5b9bd5;">Monitored Entities<br/></span>Gazelle will provide monitoring and management services for the following devices as per the table 
+                                         below:                                           
+                                         
+                </p>
+            </div>
+
+            <div>
+                <table style="border: 1px solid black;
+                              width: 100%;
+                              border-collapse: collapse;">
+                    <tr>
+                        <th style="font:11pt;font-family:sans-serif;border: 1px solid black;
+                        padding-right:10px;
+                        padding-left:10px;
+                        width:10%;" align="center">Qty</th>
+                        <th style="font:11pt;font-family:sans-serif;border: 1px solid black;
+                        padding-right:10px;
+                        padding-left:10px;
+                        width:20%;" align="center">Device</th>
+                        <th style="font:11pt;font-family:sans-serif;border: 1px solid black;
+                        padding-right:10px;
+                        padding-left:10px;
+                        width:70%;" align="center">Details</th>
+                    </tr>
+
+                    <tr>
+                        <td style="font:11pt;font-family:sans-serif;border: 1px solid black;
+                        padding-right:10px;
+                        padding-left:10px;
+                        width:10%;" align="center">1</td>
+                        <td style="font:11pt;font-family:sans-serif;border: 1px solid black;
+                        padding-right:10px;
+                        padding-left:10px;
+                        width:20%;" align="center">Fortigate 60F</td>
+                        <td style="font:11pt;font-family:sans-serif;border: 1px solid black;
+                        padding-right:10px;
+                        padding-left:10px;
+                        width:70%;" align="left">Firewall / Router</td>
+                    </tr>
+
+                    <tr>
+                        <td style="font:11pt;font-family:sans-serif;border: 1px solid black;
+                        padding-right:10px;
+                        padding-left:10px;
+                        width:10%;" align="center">2</td>
+                        <td style="font:11pt;font-family:sans-serif;border: 1px solid black;
+                        padding-right:10px;
+                        padding-left:10px;
+                        width:20%;" align="center">USW-48-PoE-Pro-G2</td>
+                        <td style="font:11pt;font-family:sans-serif;border: 1px solid black;
+                        padding-right:10px;
+                        padding-left:10px;
+                        width:70%;" align="left">48 Port PoE Switches (Voice &amp; Data)</td>
+                    </tr>
+
+                    <tr>
+                        <td style="font:11pt;font-family:sans-serif;border: 1px solid black;
+                        padding-right:10px;
+                        padding-left:10px;
+                        width:10%;" align="center">3</td>
+                        <td style="font:11pt;font-family:sans-serif;border: 1px solid black;
+                        padding-right:10px;
+                        padding-left:10px;
+                        width:20%;" align="center">UAP-AC-Pro</td>
+                        <td style="font:11pt;font-family:sans-serif;border: 1px solid black;
+                        padding-right:10px;
+                        padding-left:10px;
+                        width:70%;" align="left">WiFi Access Points</td>
+                    </tr>
+
+
+                    <tr>
+                        <td style="font:11pt;font-family:sans-serif;border: 1px solid black;
+                        padding-right:10px;
+                        padding-left:10px;
+                        width:10%;" align="center">1</td>
+                        <td style="font:11pt;font-family:sans-serif;border: 1px solid black;
+                        padding-right:10px;
+                        padding-left:10px;
+                        width:20%;" align="center">CyberPower UPS</td>
+                        <td style="font:11pt;font-family:sans-serif;border: 1px solid black;
+                        padding-right:10px;
+                        padding-left:10px;
+                        width:70%;" align="left">Battery Backup System for Network Hardware</td>
+                    </tr>
+                </table>
+            </div>
+            <br/>
+            <div>
+                <p style="font-family:sans-serif;
+                          font:11pt;
+                          "><span style="font-family:sans-serif;
+                                         font:11pt;
+                                         color: #5b9bd5;">Alert Contacts<br/></span>Should a critical alarm or situation arise, Gazelle will notify the client accordingly through a support 
+                                         ticket opened in Gazelle’s system. The below table represents the client contacts whom should be 
+                                         notified in order of importance. Should Gazelle be unable to notify a contact or that contact be 
+                                         unresponsive, Gazelle will make all reasonable attempts to contact additional resources as required.                                           
+                                         
+                </p>
+            </div>
+            <div>
+                <table style="border: 1px solid black;
+            width: 100%;
+            border-collapse: collapse; ">
+                <tr>
+                    <th style="font:11pt;font-family:sans-serif;border: 1px solid black;
+                    padding-right:10px;
+                    padding-left:10px;
+                    width:25%;" align="center">Name</th>
+                    <th style="font:11pt;font-family:sans-serif;border: 1px solid black;
+                    padding-right:10px;
+                    padding-left:10px;
+                    width:25%;" align="center">Phone</th>
+                    <th style="font:11pt;font-family:sans-serif;border: 1px solid black;
+                    padding-right:10px;
+                    padding-left:10px;
+                    width:50%;" align="center">Email Address</th>
+                </tr>
+
+                <tr>
+                    <td style="font:11pt;font-family:sans-serif;border: 1px solid black;
+                    padding-right:10px;
+                    padding-left:10px;
+                    width:25%;" align="center">Main Site Contact</td>
+                    <td style="font:11pt;font-family:sans-serif;border: 1px solid black;
+                    padding-right:10px;
+                    padding-left:10px;
+                    width:25%;" align="center">780-665-4900</td>
+                    <td style="font:11pt;font-family:sans-serif;border: 1px solid black;
+                    padding-right:10px;
+                    padding-left:10px;
+                    width:50%;" align="center">To Be Determined</td>
+                </tr>
+            </table>
+            </div>
+            <br/>
+            <div>
+                <p style="font:15.9pt;
+                            font-family:sans-serif;
+                            color: #5b9bd5;
+                            line-height: 0.8%;">Additional Information
+                </p>
+
+                <p style="font-family:sans-serif;
+                          font:11pt;
+                          ">There is no additional information to be added at this time. 
+                </p>
+
+
+                <p style="font-family:sans-serif;
+                          font:11pt;
+                          "><span style="font-family:sans-serif;
+                                         font:15.9pt;
+                                         color: #5b9bd5;">Change Requests<br/></span>Should the client require or request changes to be made to the signed SoW at any time during the 
+                                         project, a change request form will be required to be completed. Gazelle will make all reasonable efforts 
+                                         to accommodate the nature of the change requested, however this may result in additional delays or 
+                                         cost to be incurred by the client.<br/><br/>
+                                         If the nature of the request includes changes to hardware and/or services provided additional delays are 
+likely to occur including additional costs. A restocking fee and/or early termination fees may apply 
+dependent on the changes required for all hardware and services already ordered or provisioned 
+                                                                                    
+                                         
+                </p>
+
+                <p style="font-family:sans-serif;
+                          font:11pt;
+                          "><span style="font-family:sans-serif;
+                                         font:15.9pt;
+                                         color: #5b9bd5;">Delays<br/></span>Except where the relevant Statement of Work provides otherwise, scheduling of Gazelle’s resources 
+                                         must be agreed to no less than five (5) business days prior to the date work is scheduled to begin. 
+                                         Subsequent scheduling changes requested by the client may result in additional fees. Delays caused by the client under a Statement of Work to which Gazelle has dedicated resources and begun work will be 
+                                         billed to customer as follows: 
+                                                                                    
+                                         
+                </p>
+            </div>
+
+            <div>
+                <pre style="letter-spacing: -1px;
+                            padding-left:30px;
+                            font:9pt;
+                            line-height: 30%;
+                            font-family:sans-serif;">I.       Offsite planned resources will be billed at 50% of the planned hours during the period of the delay
+                </pre>
+
+                <pre style="letter-spacing: -1px;
+                            padding-left:30px;
+                            font:9pt;
+                            line-height: 30%;
+                            font-family:sans-serif;">II.      Onsite planned resources will be billed at 100% of the planned hours during the period of the delay 
+                </pre>
+
+                <pre style="letter-spacing: -1px;
+                            padding-left:30px;
+                            font:9pt;
+                            line-height: 30%;
+                            font-family:sans-serif;">        (maximum of 8 hours per day).</pre>
+            </div>
+
+            <div>
+                <p style="font-family:sans-serif;
+                          font:11pt;
+                          ">Delays caused by the client that exceed ten (10) business days shall entitle Gazelle to terminate the 
+                          relevant statement of work for cause immediately upon written notice. 
+                </p>
+            </div>
+            <br/><br/>
+            <div>
+                <p style="font:15.9pt;
+                            font-family:sans-serif;
+                            color: #5b9bd5;
+                            line-height: 0.8%;">Warranty and Disclaimers
+                </p>
+
+                <p style="font-family:sans-serif;
+                          font:11pt;
+                          ">Gazelle warrants that the Professional Services will be performed in a professional manner, in 
+                          accordance with generally accepted industry standards. The client must report any deficiencies in the 
+                          Professional Services provided by Gazelle in writing within thirty (30) days of performance of such 
+                          services to receive warranty remedies. This warranty is exclusive and in lieu of all other warranties, 
+                          whether express or implied, including any implied warranties of merchantability or fitness for a 
+                          particular purpose. After the SoW warranty expires, all incident and service request(s) are to be 
+                          processed by the Technical Services Department.
+                </p>
+
+                <br/>   
+
+
+                <p style="font:15.9pt;
+                            font-family:sans-serif;
+                            color: #5b9bd5;
+                            line-height: 0.8%;">Limitation of Liability
+                </p>
+
+                <p style="font-family:sans-serif;
+                          font:11pt;
+                          ">In no event shall either party be liable for any indirect, incidental, special, consequential, reliance or 
+                          cover damages, or damages for loss of profits, revenue, data, or use, incurred by either party or any 
+                          third party, whether in action in contract or tort, even if the other party or any other person has been 
+                          advised of the possibility of such damages. Neither party's aggregate liability for damages hereunder 
+                          shall exceed the total amount of fees paid and/or due by the client under the applicable SoW.
+                </p>
+
+                <br/>   
+
+
+                <p style="font:15.9pt;
+                            font-family:sans-serif;
+                            color: #5b9bd5;
+                            line-height: 0.8%;">Signoff and Acceptance
+                </p>
+
+                <p style="font-family:sans-serif;
+                          font:11pt;
+                          ">Failure of the client to meet any of the requirements above may result in project delays and additional 
+                          charges. Any requirements or deliverables that are not explicitly included in this SOW document are 
+                          implicitly excluded.<br/><br/> 
+                          This SOW is entered into pursuant to and is governed by the Gazelle Master Terms and Conditions 
+                          between both parties. 
+                </p>
+            </div>
+
+
+            <div>
+                <table style="width: 100%;">
+                    <tr>
+                        <td style="font:11pt;font-family:sans-serif;
+                        padding-right:10px;
+                        padding-left:10px;
+                        width:50%;">Gazelle Integrated Communications Inc.<br/>
+                                    1003 – 1235 Bay St<br/>
+                                    Toronto, Ontario, M5R 3K4<br/>
+                                    Canada
+
+                        </td>
+
+                        <td style="font:11pt;font-family:sans-serif;
+                        padding-right:10px;
+                        padding-left:10px;
+                        width:50%;">Intelligent Office : Edmonton<br/>
+                                    10060 Jasper Ave, Tower 1, Suite 2020<br/>
+                                    Edmonton, AB, T5J 3R8<br/>
+                                    Canada
+
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td style="font:11pt;font-family:sans-serif;
+                        padding-right:10px;
+                        padding-left:10px;
+                        width:50%;"><br/>Sign: ______________________________ 
+
+                        </td>
+
+                        <td style="font:11pt;font-family:sans-serif;
+                        padding-right:10px;
+                        padding-left:10px;
+                        width:50%;"><br/>Sign: ______________________________ 
+
+                        </td>
+                    </tr>
+
+
+                    <tr>
+                        <td style="font:11pt;font-family:sans-serif;
+                        padding-right:10px;
+                        padding-left:10px;
+                        width:50%;"><br/>Name: ____________________________ 
+
+                        </td>
+
+                        <td style="font:11pt;font-family:sans-serif;
+                        padding-right:10px;
+                        padding-left:10px;
+                        width:50%;"><br/>Name: ____________________________ 
+
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td style="font:11pt;font-family:sans-serif;
+                        padding-right:10px;
+                        padding-left:10px;
+                        width:50%;"><br/>Title: ______________________________ 
+
+                        </td>
+
+                        <td style="font:11pt;font-family:sans-serif;
+                        padding-right:10px;
+                        padding-left:10px;
+                        width:50%;"><br/>Title: ______________________________ 
+
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td style="font:11pt;font-family:sans-serif;
+                        padding-right:10px;
+                        padding-left:10px;
+                        width:50%;"><br/>Date: ______________________________  
+
+                        </td>
+
+                        <td style="font:11pt;font-family:sans-serif;
+                        padding-right:10px;
+                        padding-left:10px;
+                        width:50%;"><br/>Date: ______________________________ 
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </body>
+    </html>
+    
+</apex:page>

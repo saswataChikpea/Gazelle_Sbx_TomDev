@@ -1,0 +1,38 @@
+<template>
+    <lightning-card>
+        <h3 slot="title">
+            <!-- <c-chik-pea-sticks></c-chik-pea-sticks> -->
+            {title}
+        </h3>
+        <div class="slds-m-around_medium">
+            <template if:true={records}>
+                <template if:false={enableBulkDelete}>
+                    <lightning-datatable key-field="Id" hide-checkbox-column data={records} columns={columns}
+                        onsave={handleSave} onrowaction={handleRowActions} draft-values={draftValues}>
+                    </lightning-datatable>
+                </template>
+                <template if:true={enableBulkDelete}>
+                    <lightning-datatable key-field="Id" data={records} columns={columns} onsave={handleSave}
+                        onrowaction={handleRowActions} draft-values={draftValues} onrowselection={handleSelection}>
+                    </lightning-datatable>
+                </template>
+            </template>
+            <template if:false={hasRecords}>
+                <!-- <c-empty-table></c-empty-table> -->
+            </template>
+            <template if:true={error}>
+                <!-- handle Apex error -->
+            </template>
+        </div>
+        <template if:true={enableBulkDelete}>
+            <div slot="footer">
+                <lightning-button title="Delete" label="Delete Selected Row(s)" size="small" variant="brand"
+                    icon-name="utility:delete" icon-position="left" onclick={deleteRecordsRowAction}></lightning-button>
+            </div>
+        </template>
+        <template if:true={makeSpace}>
+            <div style="height: .5rem;"></div>
+        </template>
+        <div style="height: .01rem;"></div>
+    </lightning-card>
+</template>

@@ -94,234 +94,76 @@
       </table>
     </div>
     <!-- Item Table -->
-    <div class="Item-table" style="padding-top:8px;">
-      <table style="width:100%;font-size:13px;border-collapse:collapse;">
-        <tr style="background-color:rgb(17, 62, 131);color:white;">
-          <td colspan="8" style="padding:5px 0;">CO411 - Calvin Klein #411 13850 Steeles Avenue West</td>
-        </tr>
-        <tr>
-          <th>Qty</th>
-          <th>Item</th>
-          <th></th>
-          <th></th>
-          <th>Description</th>
-          <th>Unit Price</th>
-          <th>Total NRC</th>
-          <th>Total MRC</th>
-        </tr>
-        <tr>
-          <td>1</td>
-          <td>FTTB</td>
-          <td>ON</td>
-          <td>FTTB 10Mb x 10Mb</td>
-          <td></td>
-          <td>$118.00</td>
-          <td>$0.00</td>
-          <td>$118.00</td>
-        </tr>
-        <tr>
-          <td colspan="5" style="border:none;"></td>
-          <td>Subtotal</td>
-          <td>$905.00</td>
-          <td>$131.00</td>
-        </tr>
-       </table>
-    </div> 
+    <apex:pageBlock >
 
-    <!-- <div class="Item-table" style="padding-top:8px;">
-      <table style="width:100%;font-size:13px;border-collapse:collapse;">
-        <tr style="background-color:rgb(17, 62, 131);color:white;">
-          <td colspan="8" style="padding:5px 0;">CO413 - Calvin Klein #413 300 Taylor Road</td>
-        </tr>
-        <tr>
-          <th>Qty</th>
-          <th>Item</th>
-          <th></th>
-          <th></th>
-          <th>Description</th>
-          <th>Unit Price</th>
-          <th>Total NRC</th>
-          <th>Total MRC</th>
-        </tr>
-        <tr>
-          <td>1</td>
-          <td>Cable</td>
-          <td>ON</td>
-          <td>Cable 20Mb x 10Mb</td>
-          <td>Cable 20 Mbps / 10 Mbps</td>
-          <td>$76.95</td>
-          <td>$0.00</td>
-          <td>$76.95</td>
-        </tr>
-        <tr>
-          <td>1</td>
-          <td>Activation</td>
-          <td>ON</td>
-          <td>Telco Activation/Install Fee: CABLE
-            20x10 ON</td>
-          <td></td>
-          <td>$129.95</td>
-          <td>$129.95</td>
-          <td>$0.00</td>
-        </tr>
-        <tr>
-          <td>1</td>
-          <td>Network-Equipment</td>
-          <td>ON</td>
-          <td>Fortigate 30E</td>
-          <td>Fortigate Firewall</td>
-          <td>$465.00</td>
-          <td>$465.00</td>
-          <td>$0.00</td>
-        </tr>
-        <tr>
-          <td>1</td>
-          <td>Technician</td>
-          <td>ON</td>
-          <td>Onsite Technician: Installation Fee</td>
-          <td></td>
-          <td>$250.00</td>
-          <td>$250.00</td>
-          <td>$0.00</td>
-        </tr>
-        <tr>
-          <td colspan="5" style="border:none;"></td>
-          <td>Subtotal</td>
-          <td>$844.95</td>
-          <td>$76.95</td>
-        </tr>
-       </table>
-    </div> 
-   
+    <apex:repeat value="{!premiseIdToQuoteLineMap}" var="mapKey">
     <div class="Item-table" style="padding-top:8px;">
       <table style="width:100%;font-size:13px;border-collapse:collapse;">
         <tr style="background-color:rgb(17, 62, 131);color:white;">
-          <td colspan="8" style="padding:5px 0;">CO413 - Calvin Klein #413 300 Taylor Road</td>
+          <td colspan="8" style="padding:5px 0;">{!mapKey}</td>
         </tr>
         <tr>
-          <th>Qty</th>
-          <th>Item</th>
-          <th></th>
-          <th></th>
-          <th>Description</th>
-          <th>Unit Price</th>
-          <th>Total NRC</th>
-          <th>Total MRC</th>
+          <th style="width:5%;">Qty</th>
+          <th style="width:24%;">Item</th>
+          <th style="width:5%;"></th>
+          <th style="width:27%;">Description</th>
+          <th style="width:13%;">Unit Price</th>
+          <th style="width:13%;">Total NRC</th>
+          <th style="width:13%;">Total MRC</th>
         </tr>
+        <apex:repeat value="{!premiseIdToQuoteLineMap[mapKey]}" var="a">
+          <tr>
+            <td>{!a.ChikPeaTOM__Qty__c}</td>
+            <td>{!a.ChikPeaTOM__Service_Plan__r.name}</td>
+            <td>ON</td>
+            <td>{!a.ChikPeaTOM__Service_Plan__r.ChikPeaTOM__Description__c}</td>
+            <td></td>
+            <td>${!a.ChikPeaTOM__NRC__c}</td>
+            <td>${!a.ChikPeaTOM__MRC__c}</td>
+          </tr>
+        </apex:repeat>
         <tr>
-          <td>1</td>
-          <td>Cable</td>
-          <td>ON</td>
-          <td>Cable 20Mb x 10Mb</td>
-          <td>Cable 20 Mbps / 10 Mbps</td>
-          <td>$76.95</td>
-          <td>$0.00</td>
-          <td>$76.95</td>
-        </tr>
-        <tr>
-          <td>1</td>
-          <td>Activation</td>
-          <td>ON</td>
-          <td>Telco Activation/Install Fee: CABLE
-            20x10 ON</td>
-          <td></td>
-          <td>$129.95</td>
-          <td>$129.95</td>
-          <td>$0.00</td>
-        </tr>
-        <tr>
-          <td>1</td>
-          <td>Network-Equipment</td>
-          <td>ON</td>
-          <td>Fortigate 30E</td>
-          <td>Fortigate Firewall</td>
-          <td>$465.00</td>
-          <td>$465.00</td>
-          <td>$0.00</td>
-        </tr>
-        <tr>
-          <td>1</td>
-          <td>Technician</td>
-          <td>ON</td>
-          <td>Onsite Technician: Installation Fee</td>
-          <td></td>
-          <td>$250.00</td>
-          <td>$250.00</td>
-          <td>$0.00</td>
-        </tr>
-        <tr>
-          <td colspan="5" style="border:none;"></td>
-          <td>Subtotal</td>
-          <td>$844.95</td>
-          <td>$76.95</td>
+            <td colspan="4" style="border:none;"></td>
+            <td>Subtotal</td>
+            <td>${!NRCsumsByKey[mapKey]}</td>
+            <td>${!MRCsumsByKey[mapKey]}</td>
         </tr>
        </table>
     </div> 
-    
-    <div class="Item-table" style="padding-top:8px;">
-      <table style="width:100%;font-size:13px;border-collapse:collapse;">
-        <tr style="background-color:rgb(17, 62, 131);color:white;">
-          <td colspan="8" style="padding:5px 0;">CO413 - Calvin Klein #413 300 Taylor Road</td>
-        </tr>
-        <tr>
-          <th>Qty</th>
-          <th>Item</th>
-          <th></th>
-          <th></th>
-          <th>Description</th>
-          <th>Unit Price</th>
-          <th>Total NRC</th>
-          <th>Total MRC</th>
-        </tr>
-        <tr>
-          <td>1</td>
-          <td>Cable</td>
-          <td>ON</td>
-          <td>Cable 20Mb x 10Mb</td>
-          <td>Cable 20 Mbps / 10 Mbps</td>
-          <td>$76.95</td>
-          <td>$0.00</td>
-          <td>$76.95</td>
-        </tr>
-        <tr>
-          <td>1</td>
-          <td>Activation</td>
-          <td>ON</td>
-          <td>Telco Activation/Install Fee: CABLE
-            20x10 ON</td>
-          <td></td>
-          <td>$129.95</td>
-          <td>$129.95</td>
-          <td>$0.00</td>
-        </tr>
-        <tr>
-          <td>1</td>
-          <td>Network-Equipment</td>
-          <td>ON</td>
-          <td>Fortigate 30E</td>
-          <td>Fortigate Firewall</td>
-          <td>$465.00</td>
-          <td>$465.00</td>
-          <td>$0.00</td>
-        </tr>
-        <tr>
-          <td>1</td>
-          <td>Technician</td>
-          <td>ON</td>
-          <td>Onsite Technician: Installation Fee</td>
-          <td></td>
-          <td>$250.00</td>
-          <td>$250.00</td>
-          <td>$0.00</td>
-        </tr>
-        <tr>
-          <td colspan="5" style="border:none;"></td>
-          <td>Subtotal</td>
-          <td>$844.95</td>
-          <td>$76.95</td>
-        </tr>
-       </table>
-    </div> -->
-    
+    </apex:repeat>
+    <table style="width:100%;font-size:13px;border-collapse:collapse;">
+      <tr style="background-color:rgb(17, 62, 131);color:white;">
+          <th style="width:5%;"></th>
+          <th style="width:24%;"></th>
+          <th style="width:5%;"></th>
+          <th style="width:27%;"></th>
+          <th style="width:13%;">TOTAL:</th>
+          <th style="width:13%;">${!TotalNRC}</th>
+          <th style="width:13%;">${!TotalMRC}</th>
+      </tr>
+    </table>
+</apex:pageBlock>
+
+<div style="page-break-before: always;"></div>
+
+<div class="details">
+  <p>This is an order form for ordering Services from Accelerated Connections Inc. to be delivered to the undersigned customer. Terms used and not defined in this.
+    Order Form have the meanings given to them in the Master Terms and Conditions (the “Master Terms”). Once you and we sign this Order Form, this Order
+    Form together with the Master Terms, the Service Terms applicable to these Services and any other document(s) expressly incorporated into any of these
+    documents, become a legally binding agreement between us, dated the date set out above, or are incorporated effective on that date into the existing
+    agreement between us, if any (the “Agreement”). The Master Terms, Service Terms and other documents that are incorporated into them that are effective as
+    of the date of this Order Form can be viewed at www.connections.ca/terms.
+  </p>
+  <p>Prices do not include applicable taxes and shipping (unless otherwise indicated).</p>
+  <p>Prices valid for 30 days.</p>
+  <p>Initial Term set out in the Order Form per above and may be subject to Early Termination Fees, as set out in ACI Master Terms and Conditions.</p>
+  <p>Installation timeline varies based on services ordered and availability.</p>
+  <p>All speed upgrades constitute new installations.</p>
+</div>
+
+<div style="padding-top:10px;">
+  <p style="font-size:12px;"><b>{!accountName}</b></p>
+</div>
+
   </body>
 </apex:page>
