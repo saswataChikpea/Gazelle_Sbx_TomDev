@@ -14,7 +14,6 @@ public class QuoteFromOpp {
             qt.Opportunity__c = oppId;                                                                                           
             qt.Version__c=version+1;                                                                            
             insert qt;
-
         //quote line creation
           
         // List<ChikPeaTOM__Quote_Line__c> newQl  = new List<ChikPeaTOM__Quote_Line__c>();
