@@ -1,0 +1,81 @@
+<template>
+    <lightning-card>
+        <table class="slds-table slds-table_cell-buffer slds-table_bordered">
+            <thead>
+                
+            </thead>
+            <tbody>
+                <template for:each={suppliers} for:item="supplier">
+                    <tr class="slds-line-height_reset" key={supplier.supplierId}>
+                       <th> {supplier.supplierName}</th>
+                       <td>
+                        <table>
+                            <thead>
+                                <tr class="slds-line-height_reset">
+                                    <th class="" scope="col">
+                                        <div class="slds-truncate slds-line-clamp" style="display: flex;" title="Name">
+                                            Name
+                                        </div>
+                                    </th>
+                                    <th class="" scope="col">
+                                        <div class="slds-truncate slds-line-clamp" style="display: flex;" title="Name">
+                                            Capex
+                                        </div>
+                                    </th>
+                                    <th class="" scope="col">
+                                        <div class="slds-truncate slds-line-clamp" style="display: flex;" title="Name">
+                                            Opex
+                                        </div>
+                                    </th>
+                                    <th class="" scope="col">
+                                        <div class="slds-truncate slds-line-clamp" style="display: flex;" title="Name">
+                                            NRC
+                                        </div>
+                                    </th>
+                                    <th class="" scope="col">
+                                        <div class="slds-truncate slds-line-clamp" style="display: flex;" title="Name">
+                                            Select
+                                        </div>
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <template for:each={supplier.planCosts} for:item="pc">
+                                    <tr class="slds-line-height_reset" key={pc.planCostId}>
+                                        <td>
+                                            {pc.planCostName}
+                                        </td>
+                                        <td>
+                                            {pc.capex}
+                                        </td>
+                                        <td>
+                                            {pc.opex}
+                                        </td>
+                                        <td>
+                                            {pc.nrc}
+                                        </td>
+                                        <td>
+                                            <lightning-input type="checkbox"  name="input1" onchange={handleChange} checked={isChecked} data-supplier-id={supplier.supplierId}></lightning-input>
+                                        </td>
+
+                                    </tr>
+
+
+                                </template>
+                            </tbody>
+                        </table>
+                        
+                       </td>
+                    </tr>
+                </template>
+            </tbody>
+
+        </table>
+    </lightning-card>
+    <footer class="slds-grid slds-grid_align-end slds-p-vertical_medium">
+        <lightning-button variant="brand" label="Save" onclick={handleSave}></lightning-button>
+        <lightning-button variant="neutral" label="Cancel" onclick={handleCancel}></lightning-button>
+    </footer>
+
+
+</template>
