@@ -71,8 +71,13 @@
             </tbody>
 
         </table>
+        <template if:true={showSpinner}>
+            <div class="exampleHolder">
+                <lightning-spinner alternative-text="Loading" size="medium"></lightning-spinner>
+            </div>
+        </template>
     </lightning-card>
-    <footer class="slds-grid slds-grid_align-end slds-p-vertical_medium">
+    <footer class="slds-grid slds-grid_align-end slds-p-vertical_medium slds-align_absolute-center">
         <lightning-button variant="brand" label="Save" onclick={handleSave}></lightning-button>
         <lightning-button variant="neutral" label="Cancel" onclick={handleCancel}></lightning-button>
     </footer>

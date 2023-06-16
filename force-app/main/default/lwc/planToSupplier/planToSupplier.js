@@ -2,6 +2,7 @@ import { LightningElement, api , wire } from 'lwc';
 import getSuppliers from "@salesforce/apex/TOMPlanToSupplier.getSuppliers";
 import { updateRecord } from 'lightning/uiRecordApi';
 import { CloseActionScreenEvent } from 'lightning/actions';
+import { ShowToastEvent } from 'lightning/platformShowToastEvent';
 
 
 
@@ -18,6 +19,7 @@ export default class PlanToSupplier extends LightningElement {
     error;
     isChecked = false;
     newsupplierId;
+    showSpinner=false;
 
 
     @wire(getSuppliers, { qLineId: '$recordId' })
@@ -36,7 +38,7 @@ export default class PlanToSupplier extends LightningElement {
 
     handleChange(event) {
         const planCostId = event.target.name;
-    const isChecked = event.target.checked;
+        const isChecked = event.target.checked;
 
     // Find the supplier and plan cost in the data
     for (let supplier of this.suppliers) {
@@ -59,6 +61,7 @@ export default class PlanToSupplier extends LightningElement {
     handleSave() {
 
         console.log('Save Clicked');
+        this.showSpinner=true;
         const fields = {};
 
         
@@ -74,19 +77,34 @@ export default class PlanToSupplier extends LightningElement {
             .then(() => {
                 // Success! Handle any additional logic here.
                 console.log('Quote Line record updated successfully.');
-                this.closeQuickAction();
+                const event = new ShowToastEvent({
+                    title: 'Success!',
+                    message: 'Supplier Added',
+                    variant: 'success',
+                });
+                this.dispatchEvent(event);
+
+                this.handleCancel();
+                this.showSpinner=false;
+
             })
             .catch(error => {
                 // Handle error
                 console.error('Error updating Quote Line record:', error);
+                const event = new ShowToastEvent({
+                    title: 'Error!',
+                    message: error,
+                    variant: 'error',
+                });
+                this.dispatchEvent(event);
+                this.showSpinner=false;
             });
 
     }
 
-    closeQuickAction() {        
-        this.dispatchEvent( new CloseActionScreenEvent() );
-
-
+    handleCancel(){
+        const closeQuickAction = new CloseActionScreenEvent();
+        this.dispatchEvent(closeQuickAction);
     }
 
 
